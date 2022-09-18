@@ -1,1 +1,1 @@
-# TP Codo a Codo Nro.1 Python - Integrantes: Romero Pablo, Alejo Parra, Lautaro
+# TP Codo a Codo Nro.1 Python - Integrantes: Pablo Romero, Alejo Parra, Lautaro Schnaider.
