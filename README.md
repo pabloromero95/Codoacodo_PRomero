@@ -5,7 +5,7 @@
 ## Integrantes:
 
 - [x] Pablo Romero
-- [x] Alejo Parra
+- [x] Alejo Gómez Parra
 - [x] Lautaro Schnaider
 
 ---
