@@ -349,7 +349,13 @@
   }
 
   /* Fin de Normalize */
-  
+
   :root{
     font-size: 16px;
+    --color_style1: ;
+    --color_style2: ;
+    --color_font1: ;
+    --color_style1_altern: ;
+    --color_style2_altern: ;
+    --color_font2: ;
   }
