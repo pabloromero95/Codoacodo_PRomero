@@ -352,14 +352,12 @@
 
   :root{
     font-size: 16px;
-<<<<<<< Updated upstream
     --color_style1: ;
     --color_style2: ;
     --color_font1: ;
     --color_style1_altern: ;
     --color_style2_altern: ;
     --color_font2: ;
-=======
   }
 
   .test {
@@ -399,5 +397,4 @@
 
   @media (min-width: 721px) {
     /* Desktop Code*/
->>>>>>> Stashed changes
   }
