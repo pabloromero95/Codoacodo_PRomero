@@ -352,10 +352,52 @@
 
   :root{
     font-size: 16px;
+<<<<<<< Updated upstream
     --color_style1: ;
     --color_style2: ;
     --color_font1: ;
     --color_style1_altern: ;
     --color_style2_altern: ;
     --color_font2: ;
+=======
+  }
+
+  .test {
+    background-color: red;
+  }
+
+  header {
+    display:flex;
+  }
+
+  #gaming {
+    font-size: 1rem;
+  }
+
+  #navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  #navbar li{
+    list-style: none;
+  }
+
+  #carrousel {
+    background-color: red;
+    height: 20vh;
+  }
+
+  @media (max-width:480px) {
+    /* Mobile Code*/
+  }
+
+  @media (min-width:481px) and (max-width: 720px) {
+    /* Tablet Code*/
+  }
+
+  @media (min-width: 721px) {
+    /* Desktop Code*/
+>>>>>>> Stashed changes
   }
