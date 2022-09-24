@@ -10,27 +10,55 @@
 </head>
 <body>
     <header>
-        <nav>
-            <span><i class="fa-solid fa-bars"></i>Menu</span>
-            <ul id="navbar">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Juegos digitales</a></li>
-                <li><a href="">Juegos físicos</a></li>
-                <li><a href="">Juegos de mesa</a></li>
-            </ul>
+        <nav class="topnav" id="myTopnav">
+            <a href="#home" class="active" id="Name">Gaming4All</a>
+            <div class="dropdown">
+                <button class="dropbtn">Juegos
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Físicos</a>
+                  <a href="#">Digitales</a>
+                  <a href="#">De mesa</a>
+                </div>
+              </div> 
+            <a href="#news">Noticias</a>
+            <a href="#about">Sobre nosotros</a>
+            <a href="#contact">Contacto</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
-        <span class="test">
-            <h1 id="gaming">Gaming4All</h1>
-        </span>
     </header>
-    <section id="carrousel">
+    <br>
+    <div class="carrousel">
+        <div class="carrousel__container">
+            <img src="" alt="Imagen 1" class="img">
+            <img src="" alt="Imagen 2" class="img">
+        </div>
+        <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+        </ul>
+    </div>
 
-    </section>
     <section class="juegoContainer">
 
     </section>
     <footer>
         
     </footer>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+    <script src="gaming.js"></script>
 </body>
 </html>
