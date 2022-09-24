@@ -370,12 +370,17 @@
 
   @keyframes slide {
     0% {
-      translateX:(0%);
+      transform:translateX(0%);
+      }
+
+    50% {
+       transform:translateX(-50%);
       }
 
     100% {
-       translateX:(50%);
-      }
+        transform:translateX(0%);
+        }
+  
   }
 
   .carrousel {
@@ -385,7 +390,6 @@
     padding:1em;
     border-radius: 25px;
     margin-top: 70px;
-    animation: slide 1s ease infinite;
   } 
 
   .carrousel .carrousel__container {
@@ -397,7 +401,8 @@
     align-items: center;
     padding: 2em;
     border-radius: 25px;
-    animation: slide 1s ease infinite;
+    animation: slide 15s ease infinite;
+    
   }
 
   .carrousel__container .img {
@@ -408,7 +413,6 @@
     background: linear-gradient(145deg, #cacaca, #f0f0f0);
     box-shadow:  15px 15px 30px #bebebe,
              -15px -15px 30px #ffffff;
-             animation: slide 1s ease infinite;
   }
 
   .carrousel .puntos {
