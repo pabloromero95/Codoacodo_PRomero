@@ -31,12 +31,10 @@
     <br>
     <div class="carrousel">
         <div class="carrousel__container">
-            <img src="" alt="Imagen 1" class="img">
-            <img src="" alt="Imagen 2" class="img">
+            <img src="assets/nier.jpg" alt="Imagen 1" class="img">
+            <img src="assets/ciberpunk.jpg" alt="Imagen 2" class="img">
         </div>
         <ul class="puntos">
-            <li class="punto activo"></li>
-            <li class="punto"></li>
             <li class="punto"></li>
             <li class="punto"></li>
         </ul>
@@ -48,7 +46,7 @@
     <footer>
         
     </footer>
-
+    <script src="gaming.js"></script>
     <script>
         function myFunction() {
           var x = document.getElementById("myTopnav");
@@ -58,7 +56,27 @@
             x.className = "topnav";
           }
         }
+
+        const carrousel__container = document.querySelector('carrousel__container');
+
+const punto = document.querySelectorAll('punto');
+
+
+ punto.forEach((cadaPunto, i)=>{
+    punto[i].addEventListener('click',()=>{
+
+        let posicion = i;
+        let operacion = posicion * -50;
+
+        carrousel__container.style.transform = 'translateX(${operacion}%)';
+        punto.forEach((cadaPunto, i)=>{
+            punto[i].classList.remove('activo')
+        })
+        punto[i].classList.add('activo')
+    })
+ }) 
+
     </script>
-    <script src="gaming.js"></script>
+
 </body>
 </html>
