@@ -553,8 +553,26 @@
     text-align: left;
   }
 }
+.articleContainer{
+  display: flex;
+  justify-content: center;
+}
+.juegoContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  width: 30%;
+  margin: 5vh;
+  background-color: #00f0f0;
+}
 
-
+.juegoPortada{
+  max-width: 20vw;
+  max-height:20vh;
+  object-fit:contain ;
+}
 @media screen and (max-width: 600px) {
 
 }
