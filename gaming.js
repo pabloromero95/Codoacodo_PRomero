@@ -1,27 +1,54 @@
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
-//Objetivos del punto -
- //cuando click en punto saber posicion de punto
- //quitar la clase activo de los puntos
- //añadir la clase activo al punto que le damos click
+let slidePosition = 0;
+const slides = document.getElementsByClassName('carousel__item');
+const totalSlides = slides.length;
 
+document.
+  getElementById('carousel__button--next')
+  .addEventListener("click", function() {
+    moveToNextSlide();
+  });
+document.
+  getElementById('carousel__button--prev')
+  .addEventListener("click", function() {
+    moveToPrevSlide();
+  });
 
- //aplicar transform translate a carrousel
+function updateSlidePosition() {
+  for (let slide of slides) {
+    slide.classList.remove('carousel__item--visible');
+    slide.classList.add('carousel__item--hidden');
+  }
 
-const carrousel__container = document.querySelector('carrousel__container');
+  slides[slidePosition].classList.add('carousel__item--visible');
+}
 
-const punto = document.querySelectorAll('puntos');
+function moveToNextSlide() {
+  if (slidePosition === totalSlides - 1) {
+    slidePosition = 0;
+  } else {
+    slidePosition++;
+  }
 
+  updateSlidePosition();
+}
 
- punto.forEach((cadaPunto, i)=>{
-    punto[i].addEventListener('click',()=>{
+function moveToPrevSlide() {
+  if (slidePosition === 0) {
+    slidePosition = totalSlides - 1;
+  } else {
+    slidePosition--;
+  }
 
-        let posicion = i;
-        let operacion = posicion * -50;
+  updateSlidePosition();
+}
 
-        carrousel__container.style.transform = 'translateX(${operacion}%)';
-        punto.forEach((cadaPunto, i)=>{
-            punto[i].classList.remove('activo')
-        })
-        punto[i].classList.add('activo')
-    })
- }) 
+setInterval(moveToNextSlide,7000);
