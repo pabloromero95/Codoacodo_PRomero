@@ -171,6 +171,76 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.juegoContainer{
+  background-color: yellow;
+  display: grid;
+  width: 20%;
+  max-width: 600px;
+  margin: 5vw;
+  max-height: 600px;
+  height: 300px;
+  grid-template: 1fr 3fr 1fr/ 1fr 2fr;
+  grid-template-areas: 
+            "header header"
+            "image description"
+            "price price";
+  gap: 5px;
+  
+  height: 40vh;
+  min-width: 200px;
+  max-width: 400px;
+  background-color: var(--color_style3);
+  margin: 5vh 2vw 0 2vw;
+  border: 3px solid var(--color_font1);
+  border-radius: 1rem;
+  box-shadow:  5px 5px 10px #23185a;
+}
+.juegoTitulo{
+  grid-area:header;
+  justify-self:center;
+  height: 20%;
+  min-height: 50px;
+}
+.juegoImg{
+  grid-area: image;
+  width: 100%;
+  height: 60%;
+  min-width: 100px;
+}
+.juegoPortada{
+  max-width: 100%;
+  width: 100%;
+  height:auto;
+  
+  max-width: 20vw;
+  max-height:20vh;
+  object-fit:contain;
+  justify-content: flex-start;
+}
+.juegoDescripcion{
+  grid-area:description;
+  min-width: 20vw;
+  
+  display: block;
+  height:100%;
+  width: 90%;
+  border-radius: 0 20px;
+  background-color: var(--color_style1);
+  margin:10px;
+  text-align: center;
+}
+.juegoPrecio{
+  grid-area:price;
+  height: 20%;
+  min-height: 50px;
+  justify-self: center;
+  align-self: center;
+}
+.juegoPrecio a{
+  
+  justify-self: center;
+  align-self: center;
+}
 
 @media (max-width:250px) {
   /* Mobile Code*/
@@ -202,19 +272,34 @@
     width: 100%;
     text-align: left;
   }
+
+  .articleContainer{
+    flex-direction: column;
+  }
+  .juegoContainer{
+    width: 100%;
+  }
 }
 
-@media (min-width: 721px) {
-  /* Desktop Code*/
+@media (min-width: 600px) {
+  /* Tablet Code*/
+  .articleContainer{
+    flex-direction: row;
+  }
+  .juegoContainer{
+    width: 40%;
+  }
 }
-
+@media screen and (min-width:1000px){
+  
+}
 .articleContainer{
   margin-top: 10vh;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-/*
+/* Cajas Flex
 .juegoContainer{
   display: flex;
   flex-direction: column;
@@ -258,37 +343,4 @@
 }
 */
 
-.juegoContainer{
-  background-color: yellow;
-  display: grid;
-  width: 20%;
-  max-width: 600px;
-  margin: 5vw;
-  max-height: 600px;
-  height: 300px;
-  grid-template: 1fr 3fr 1fr/ 1fr 2fr;
-  grid-template-areas: 
-            "header header"
-            "image description"
-            "price price";
-  gap: 5px;
-}
-.juegoTitulo{
-  grid-area:header;
-  justify-self:center;
-}
-.juegoImg{
-  grid-area: image;
-  width: 100%;
-  height: auto;
-}
-.juegoPortada{
-  max-width: 100%;
-  width: 100%;
-}
-.juegoDescripcion{
-  grid-area:description;
-}
-.juegoPrecio{
-  grid-area:price;
-}
+/*Cajas Grid*/
