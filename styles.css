@@ -242,6 +242,61 @@
   align-self: center;
 }
 
+footer{
+  display: grid;
+  font-size: 62.5%;
+  max-height: 600px;
+  height: 200px;
+  grid-template-rows: 2fr 6fr 2fr;
+  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-areas:
+              'nombre iconos up'
+              'infoNosotros Contacto up'
+              'mapa_sitio mapa_sitio mapa_sitio';
+}
+
+footer .siteTitle{
+  grid-area: nombre;
+  align-self: center;
+  margin-left: 0.4rem;
+}
+footer .SM-icons{
+  grid-area: iconos;
+  align-self: center;
+  justify-self: center;
+}
+.SM-icons .fa-brands{
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+footer .siteInfo{
+  grid-area:infoNosotros;
+}
+footer .contactInfo{
+  grid-area:Contacto;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer .backUp{
+  grid-area:up;
+  justify-self: center;
+  align-self: center;
+}
+.fa-circle-up{
+  font-size: 2rem;
+}
+footer .siteMap{
+  grid-area: mapa_sitio;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.siteMap .break{
+  flex-basis: 100%;
+  height: 0;
+}
+
 @media (max-width:250px) {
   /* Mobile Code*/
 }

@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav class="topnav" id="myTopnav">
-            <a href="#home" class="active" id="Name">Gaming4All</a>
+            <a href="#home" class="active" id="navBar">Gaming4All</a> <!--Le cambié el nombre al ID.-->
             <div class="dropdown">
                 <button class="dropbtn">Juegos
                   <i class="fa fa-caret-down"></i>
@@ -34,6 +34,7 @@
         </nav>
     </header>
     <br>
+    <span id="Top"></span>
     <div class="carousel">
         <div class="carousel__item carousel__item--visible">
             <img src="assets/nier.jpg" />
@@ -93,10 +94,53 @@
                 <a href="#"><span class="precioT"> Precio: $</span></a>
             </div>
         </article>
+        <article class="juegoContainer">
+            <h3 class="juegoTitulo">Wingspan</h3>
+            <a class="juegoImg" href="#">
+                <img class= "juegoPortada" src="assets/wingspan.jpg" alt="portada del juego"></a>
+            </a>
+            <div class="juegoDescripcion">
+                <p>Juego de Pajaros </p>
+            </div>
+            <div class="juegoPrecio">
+                <a href="#"><span class="precioT"> Precio: $</span></a>
+            </div>
+        </article>
     </section>
         
     <footer>
-        
+        <div class="siteTitle">
+            <h2>All4Gaming</h2>
+        </div>
+        <div class="SM-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+        </div>
+        <div class="siteInfo">
+            <p>Somos un local argentino que busca proveer lo que necesitan a todo tipo de jugadores. Ya sean de Playstation, Xbox, Nintendo, Juegos de mesa, o Pc.</p>
+            <p>otras cosas sobre nosotrs.</p>
+        </div>
+        <div class="contactInfo">
+            <span id="Cnumero">+54 11 65319794</span>
+            <span id="Cemail"> all4gaming@gmail.com</span>
+            <span id="Cdireccion"> Av. Boyaca 374</span>
+            <span id="Chorarios"> Lunes a Viernes de 9:30hs a 16:30hs</span>
+        </div>
+        <div class="siteMap">
+            <span class="map-item"><a href="#">home</a></span>
+            <span class="map-item"><a href="#">juegos</a></span>
+            <span class="map-item"><a href="#">juegos digitales</a></span>
+            <span class="map-item"><a href="#">juegos de mesa</a></span>
+            <span class="map-item break"></span>
+            <span class="map-item"><a href="#">noticias</a></span>
+            <span class="map-item"><a href="#">sobre nosotros</a></span>
+            <span class="map-item"><a href="#">contacto</a></span>
+        </div>
+        <div class="backUp">
+            <a href="#Top"><i class="fa-solid fa-circle-up"></i></a>
+        </div>
     </footer>
 
     
