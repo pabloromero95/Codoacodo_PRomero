@@ -171,10 +171,17 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.articleContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.j-item{
+min-width:0;
+min-height: 0;
+}
 .juegoContainer{
-  background-color: yellow;
   display: grid;
-  width: 20%;
   max-width: 600px;
   margin: 5vw;
   max-height: 600px;
@@ -192,18 +199,27 @@
   border: 3px solid var(--color_font1);
   border-radius: 1rem;
   box-shadow:  5px 5px 10px #23185a;
+  justify-self: center;
+    align-self: center;
 }
 .juegoTitulo{
   grid-area:header;
   justify-self:center;
   height: 15%;
   min-height: 1.5rem;
+  flex-basis: 10%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 .juegoImg{
   grid-area: image;
+  display: inline-flex;
   width: 100%;
   height: 60%;
   min-width: 100px;
+  flex-basis: 40%;
+  flex-grow: 3;
+  flex-shrink: 2;
 }
 .juegoPortada{
   max-width: 100%;
@@ -211,7 +227,6 @@
   height:auto;
   max-height:20vh;
   object-fit:contain;
-  justify-content: flex-start;
 }
 .juegoDescripcion{
   grid-area:description;
@@ -223,13 +238,20 @@
   background-color: var(--color_style1);
   margin:10px;
   text-align: center;
+  flex-basis: 40%;
+  flex-grow:3;
+  flex-shrink: 2;
+  overflow: auto;
 }
 .juegoPrecio{
   grid-area:price;
-  height: 20%;
-  min-height: 50px;
+  height: 10%;
+  min-height: 2rem;
   justify-self: center;
   align-self: center;
+  flex-basis: 10%;
+  flex-grow:1;
+  flex-shrink: 1;
 }
 .juegoPrecio a{
   
@@ -240,9 +262,9 @@
 footer{
   display: grid;
   font-size: 62.5%;
-  max-height: 300px;
-  height: 200px;
-  margin-top: 20%;
+  max-height: 200px;
+  height: 10vh;
+  margin-top: 10%;
   grid-template-rows: 2fr 6fr 2fr;
   grid-template-columns: 3fr 2fr 1fr;
   grid-template-areas:
@@ -293,10 +315,6 @@ footer .siteMap{
   height: 0;
 }
 
-@media (max-width:250px) {
-  /* Mobile Code*/
-}
-
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
@@ -328,70 +346,67 @@ footer .siteMap{
     flex-direction: column;
   }
   .juegoContainer{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 55vh;
+    min-width: 200px;
+    max-width: 400px;
+    background-color: var(--color_style3);
+    margin: 5vh 2vw 0 2vw;
+    border: 3px solid var(--color_font1);
+    border-radius: 1rem;
+    box-shadow:  5px 5px 10px #23185a;
+    
+  }
+  
+  .juegoPortada{
+    max-height:20vh;
+    object-fit:contain;
+    justify-content: flex-start;
+  }
+  
+  .juegoImg img {
+    height: 90%;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .juegoDescripcion {
+    display: block;
+    height:100%;
+    width: 90%;
+    border-radius: 0 20px;
+    background-color: var(--color_style1);
+    margin:10px;
+    text-align: center;
+  }
+  
+  .juegoDescripcion p,span {
+    font-family: 'Petrona', 'Fraunces','serif';
   }
 }
 
 @media (min-width: 600px) {
   /* Tablet Code*/
   .articleContainer{
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
   }
   .juegoContainer{
-    width: 40%;
+    max-width: 25rem;
+  }
+}
+@media screen and (min-width:1600px){
+  .articleContainer{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media screen and (min-width: 1295px){ /*Este media screen no esta funcionando. Me aplica el margin-top 10vh con un viewport de 320px*/
   
 }
-.articleContainer{
-  margin-top: 10vh;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-/* Cajas Flex
-.juegoContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 50vh;
-  min-width: 200px;
-  max-width: 400px;
-  background-color: var(--color_style3);
-  margin: 5vh 2vw 0 2vw;
-  border: 3px solid var(--color_font1);
-  border-radius: 1rem;
-  box-shadow:  5px 5px 10px #23185a;
-}
-
-.juegoPortada{
-  max-width: 20vw;
-  max-height:20vh;
-  object-fit:contain;
-  justify-content: flex-start;
-}
-
-.juegoImg img {
-  height: 90%;
-  margin: auto;
-  align-items: center;
-}
-
-.juegoDescripcion {
-  display: block;
-  height:100%;
-  width: 90%;
-  border-radius: 0 20px;
-  background-color: var(--color_style1);
-  margin:10px;
-  text-align: center;
-}
-
-.juegoDescripcion p,span {
-  font-family: 'Petrona', 'Fraunces','serif';
-}
-*/
-
-/*Cajas Grid*/
