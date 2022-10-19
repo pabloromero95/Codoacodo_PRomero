@@ -171,9 +171,148 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.articleContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.j-item{
+min-width:0;
+min-height: 0;
+}
+.juegoContainer{
+  display: grid;
+  max-width: 600px;
+  margin: 5vw;
+  max-height: 600px;
+  height: 300px;
+  grid-template: 1fr 3fr 1fr/ 1fr 2fr;
+  grid-template-areas: 
+            "header header"
+            "image description"
+            "price price";
+  gap: 5px;
+  min-width: 200px;
+  max-width: 400px;
+  background-color: var(--color_style3);
+  margin: 5vh 1vw 0 1vw;
+  border: 3px solid var(--color_font1);
+  border-radius: 1rem;
+  box-shadow:  5px 5px 10px #23185a;
+  justify-self: center;
+    align-self: center;
+}
+.juegoTitulo{
+  grid-area:header;
+  justify-self:center;
+  height: 15%;
+  min-height: 1.5rem;
+  flex-basis: 10%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.juegoImg{
+  grid-area: image;
+  display: inline-flex;
+  width: 100%;
+  height: 60%;
+  min-width: 100px;
+  flex-basis: 40%;
+  flex-grow: 3;
+  flex-shrink: 2;
+}
+.juegoPortada{
+  max-width: 100%;
+  width: 100%;
+  height:auto;
+  max-height:20vh;
+  object-fit:contain;
+}
+.juegoDescripcion{
+  grid-area:description;
+  display: block;
+  height:100%;
+  max-height: 200px;
+  width: 90%;
+  border-radius: 0 20px;
+  background-color: var(--color_style1);
+  margin:10px;
+  text-align: center;
+  flex-basis: 40%;
+  flex-grow:3;
+  flex-shrink: 2;
+  overflow: auto;
+}
+.juegoPrecio{
+  grid-area:price;
+  height: 10%;
+  min-height: 2rem;
+  justify-self: center;
+  align-self: center;
+  flex-basis: 10%;
+  flex-grow:1;
+  flex-shrink: 1;
+}
+.juegoPrecio a{
+  
+  justify-self: center;
+  align-self: center;
+}
 
-@media (max-width:250px) {
-  /* Mobile Code*/
+footer{
+  display: grid;
+  font-size: 62.5%;
+  max-height: 200px;
+  height: 10vh;
+  margin-top: 10%;
+  grid-template-rows: 2fr 6fr 2fr;
+  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-areas:
+              'nombre iconos up'
+              'infoNosotros Contacto up'
+              'mapa_sitio mapa_sitio mapa_sitio';
+}
+
+footer .siteTitle{
+  grid-area: nombre;
+  align-self: center;
+  margin-left: 0.4rem;
+}
+footer .SM-icons{
+  grid-area: iconos;
+  align-self: center;
+  justify-self: center;
+}
+.SM-icons .fa-brands{
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+footer .siteInfo{
+  grid-area:infoNosotros;
+}
+footer .contactInfo{
+  grid-area:Contacto;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer .backUp{
+  grid-area:up;
+  justify-self: center;
+  align-self: center;
+}
+.fa-circle-up{
+  font-size: 2rem;
+}
+footer .siteMap{
+  grid-area: mapa_sitio;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.siteMap .break{
+  flex-basis: 100%;
+  height: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -202,64 +341,72 @@
     width: 100%;
     text-align: left;
   }
+
+  .articleContainer{
+    flex-direction: column;
+  }
+  .juegoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 55vh;
+    min-width: 200px;
+    max-width: 400px;
+    background-color: var(--color_style3);
+    margin: 5vh 2vw 0 2vw;
+    border: 3px solid var(--color_font1);
+    border-radius: 1rem;
+    box-shadow:  5px 5px 10px #23185a;
+    
+  }
+  
+  .juegoPortada{
+    max-height:20vh;
+    object-fit:contain;
+    justify-content: flex-start;
+  }
+  
+  .juegoImg img {
+    height: 90%;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .juegoDescripcion {
+    display: block;
+    height:100%;
+    width: 90%;
+    border-radius: 0 20px;
+    background-color: var(--color_style1);
+    margin:10px;
+    text-align: center;
+  }
+  
+  .juegoDescripcion p,span {
+    font-family: 'Petrona', 'Fraunces','serif';
+  }
 }
 
-@media (min-width: 721px) {
-  /* Desktop Code*/
+@media (min-width: 600px) {
+  /* Tablet Code*/
+  .articleContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  .juegoContainer{
+    max-width: 25rem;
+  }
 }
-
-.articleContainer{
-  margin-top: 10vh;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+@media screen and (min-width:1600px){
+  .articleContainer{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
-
-.juegoContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 50vh;
-  min-width: 200px;
-  max-width: 400px;
-  background-color: var(--color_style3);
-  margin: 5vh 2vw 0 2vw;
-  border: 3px solid var(--color_font1);
-  border-radius: 1rem;
-  box-shadow:  5px 5px 10px #23185a;
+@media screen and (min-width: 1295px){ /*Este media screen no esta funcionando. Me aplica el margin-top 10vh con un viewport de 320px*/
+  
 }
-
-.juegoImg {
-  display: flex;
-  flex-direction: column;
-  height:40%;
-  width: 90%;
- /* background-color: yellow;*/
-  margin:auto;
-  text-align: center;
-}
-
-.juegoImg img {
-  height: 90%;
-  margin: auto;
-  align-items: center;
-}
-
-.juegoDescripcion {
-  display: block;
-  height:100%;
-  width: 90%;
-  border-radius: 0 20px;
-  background-color: var(--color_style1);
-  margin:10px;
-  text-align: center;
-}
-
-.juegoDescripcion p,span {
-  font-family: 'Petrona', 'Fraunces','serif';
-}
-
-
-
-

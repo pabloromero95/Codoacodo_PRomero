@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav class="topnav" id="myTopnav">
-            <a href="#home" class="active" id="Name">Gaming4All</a>
+            <a href="#home" class="active" id="navBar">Gaming4All</a> <!--Le cambié el nombre al ID.-->
             <div class="dropdown">
                 <button class="dropbtn">Juegos
                   <i class="fa fa-caret-down"></i>
@@ -34,6 +34,7 @@
         </nav>
     </header>
     <br>
+    <span id="Top"></span>
     <div class="carousel">
         <div class="carousel__item carousel__item--visible">
             <img src="assets/nier.jpg" />
@@ -56,41 +57,90 @@
         </div>
       </div>
 
-    <article class="articleContainer">
-        <div class="juegoContainer">
-            <div class="juegoImg">
-                <img class= "juegoPortada" src="assets/pic5226311.png" alt="portada del juego"></a>
+    <section class="articleContainer">
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">Cubitos</h3>
+            <a class="juegoImg j-item" href="#">
+                <img class= "juegoPortada j-item" src="assets/pic5226311.png" alt="portada del juego"></a>
+            </a>
+            <div class="juegoDescripcion j-item">
+                <p>Juego de cubitos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia eligendi maiores perferendis amet est animi itaque neque corrupti, expedita, asperiores alias sed veritatis ea? Illo. </p>
             </div>
-            <div class="juegoDescripcion">
-                <h3 class="juegoTitulo">Cubitos</h3>
-                <p>Juego de cubitos</p>
-                <span class="juegoPrecio"> Precio: $</span>
+            <div class="juegoPrecio j-item">
+                <a href="#"><span class="precioT"> Precio: $</span></a>
             </div>
-        </div>
-        <div class="juegoContainer">
-            <div class="juegoImg">
-                <img class= "juegoPortada" src="assets/pic2649434.png" alt="portada del juego"></a>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">Food Chain Magnate</h3>
+            <a class="juegoImg j-item" href="#">
+                <img class= "juegoPortada j-item" src="assets/pic2649434.png" alt="portada del juego"></a>
+            </a>
+            <div class="juegoDescripcion j-item">
+                <p>Juego de cocina Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum inventore et sunt ab totam velit nesciunt unde dicta, repellat, consequatur ullam? Quas, nam in.</p>
             </div>
-            <div class="juegoDescripcion">
-                <h3 class="juegoTitulo">Food Chain Magnate</h3>
-                <p>Juego de cocina</p>
-                <span class="juegoPrecio"> Precio: $</span>
+            <div class="juegoPrecio j-item">
+                <a href="#"><span class="precioT"> Precio: $</span></a> 
             </div>
-        </div>
-        <div class="juegoContainer">
-            <div class="juegoImg">
-                <img class= "juegoPortada" src="assets/pic6137456.png" alt="portada del juego"></a>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">Skull King</h3>
+            <a class="juegoImg j-item" href="#">
+                <img class= "juegoPortada j-item" src="assets/pic6137456.png" alt="portada del juego"></a>
+            </a>
+            <div class="juegoDescripcion j-item">
+                <p>Juego de calaveritas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates eaque odit magni, cupiditate, soluta inventore laboriosam dolor in reprehenderit temporibus ipsa, veniam rerum atque aliquid!</p>
             </div>
-            <div class="juegoDescripcion">
-                <h3 class="juegoTitulo">Skull King</h3>
-                <p>Juego de calaveritas </p>
-                <span class="juegoPrecio"> Precio: $</span>
+            <div class="juegoPrecio j-item">
+                <a href="#"><span class="precioT"> Precio: $</span></a>
             </div>
-        </div>
-    </article>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">Wingspan</h3>
+            <a class="juegoImg j-item" href="#">
+                <img class= "juegoPortada j-item" src="assets/wingspan.jpg" alt="portada del juego"></a>
+            </a>
+            <div class="juegoDescripcion j-item">
+                <p>Juego de Pajaros Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam distinctio necessitatibus delectus nobis illum beatae? Ad, eum omnis officiis molestias labore obcaecati nobis nihil ducimus.</p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <a href="#"><span class="precioT"> Precio: $</span></a>
+            </div>
+        </article>
+    </section>
         
     <footer>
-        
+        <div class="siteTitle">
+            <h2>All4Gaming</h2>
+        </div>
+        <div class="SM-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+        </div>
+        <div class="siteInfo">
+            <p>Somos un local argentino que busca proveer lo que necesitan a todo tipo de jugadores. Ya sean de Playstation, Xbox, Nintendo, Juegos de mesa, o Pc.</p>
+            <p>otras cosas sobre nosotrs.</p>
+        </div>
+        <div class="contactInfo">
+            <span id="Cnumero">+54 11 65319794</span>
+            <span id="Cemail"> all4gaming@gmail.com</span>
+            <span id="Cdireccion"> Av. Boyaca 374</span>
+            <span id="Chorarios"> Lunes a Viernes de 9:30hs a 16:30hs</span>
+        </div>
+        <div class="siteMap">
+            <span class="map-item"><a href="#">home</a></span>
+            <span class="map-item"><a href="#">juegos</a></span>
+            <span class="map-item"><a href="#">juegos digitales</a></span>
+            <span class="map-item"><a href="#">juegos de mesa</a></span>
+            <span class="map-item break"></span>
+            <span class="map-item"><a href="#">noticias</a></span>
+            <span class="map-item"><a href="#">sobre nosotros</a></span>
+            <span class="map-item"><a href="#">contacto</a></span>
+        </div>
+        <div class="backUp">
+            <a href="#Top"><i class="fa-solid fa-circle-up"></i></a>
+        </div>
     </footer>
 
     
