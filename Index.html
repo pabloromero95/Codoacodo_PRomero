@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/88429e7dc0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Petrona:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Petrona:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,9 +22,10 @@
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="#">Físicos</a>
-                  <a href="#">Digitales</a>
-                  <a href="#">De mesa</a>
+                  <a href="#juegosDigitales">Digitales</a>
+                  <a href="#juegosXBox">Xbox</a>
+                  <a href="#juegosPs4">PS4</a>
+                  <a href="#accesorios">Accesorios</a>
                 </div>
               </div> 
             <a href="#news">Noticias</a>
@@ -34,22 +35,22 @@
         </nav>
     </header>
     <br>
-    <span id="Top"></span>
+    <span id="home"></span>
     <div class="carousel">
         <div class="carousel__item carousel__item--visible">
-            <img src="assets/nier.jpg" />
+            <img src="assets/carr/D-NA.jpg" />
         </div>
         <div class="carousel__item">
-            <img src="assets/ciberpunk.jpg" />
+            <img src="assets/carr/D-CP2077.jpg" />
         </div>
         <div class="carousel__item">
-            <img src="assets/nomanssky.jpg" />
+            <img src="assets/carr/D-NMS.jpg" />
         </div>
         <div class="carousel__item">
-            <img src="assets/fallout4.jpg" />
+            <img src="assets/carr/D-FO4.jpg" />
           </div>
         <div class="carousel__item">
-            <img src="assets/dyinglight2.jpg" />
+            <img src="assets/carr/D-FC6.jpg" />
         </div>
         <div class="carousel__actions">
           <button id="carousel__button--prev" aria-label="Previous slide"><</button>
@@ -57,90 +58,381 @@
         </div>
       </div>
 
+      <br>
+
+      <p id="juegosDigitales" class="gamesCategory">Juegos Digitales</p>
+    
     <section class="articleContainer">
         <article class="juegoContainer j-item">
-            <h3 class="juegoTitulo j-item">Cubitos</h3>
-            <a class="juegoImg j-item" href="#">
-                <img class= "juegoPortada j-item" src="assets/pic5226311.png" alt="portada del juego"></a>
-            </a>
+            <h3 class="juegoTitulo j-item">1</h3>
+                <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
             <div class="juegoDescripcion j-item">
-                <p>Juego de cubitos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia eligendi maiores perferendis amet est animi itaque neque corrupti, expedita, asperiores alias sed veritatis ea? Illo. </p>
+                <p></p>
             </div>
             <div class="juegoPrecio j-item">
-                <a href="#"><span class="precioT"> Precio: $</span></a>
+                <span class="precioT"> Precio: $</span>
             </div>
         </article>
         <article class="juegoContainer j-item">
-            <h3 class="juegoTitulo j-item">Food Chain Magnate</h3>
-            <a class="juegoImg j-item" href="#">
-                <img class= "juegoPortada j-item" src="assets/pic2649434.png" alt="portada del juego"></a>
-            </a>
+            <h3 class="juegoTitulo j-item">2</h3>
+                <img class= "juegoImg j-item" src="assets/pic2649434.png" alt="portada del juego">
             <div class="juegoDescripcion j-item">
-                <p>Juego de cocina Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum inventore et sunt ab totam velit nesciunt unde dicta, repellat, consequatur ullam? Quas, nam in.</p>
+                <p></p>
             </div>
             <div class="juegoPrecio j-item">
-                <a href="#"><span class="precioT"> Precio: $</span></a> 
+                <span class="precioT"> Precio: $</span>
             </div>
         </article>
         <article class="juegoContainer j-item">
-            <h3 class="juegoTitulo j-item">Skull King</h3>
-            <a class="juegoImg j-item" href="#">
-                <img class= "juegoPortada j-item" src="assets/pic6137456.png" alt="portada del juego"></a>
-            </a>
+            <h3 class="juegoTitulo j-item">3</h3>
+            <img class= "juegoImg j-item" src="assets/pic6137456.png" alt="portada del juego">
             <div class="juegoDescripcion j-item">
-                <p>Juego de calaveritas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates eaque odit magni, cupiditate, soluta inventore laboriosam dolor in reprehenderit temporibus ipsa, veniam rerum atque aliquid!</p>
+                <p></p>
             </div>
             <div class="juegoPrecio j-item">
-                <a href="#"><span class="precioT"> Precio: $</span></a>
+                <span class="precioT"> Precio: $</span>
             </div>
         </article>
         <article class="juegoContainer j-item">
-            <h3 class="juegoTitulo j-item">Wingspan</h3>
-            <a class="juegoImg j-item" href="#">
-                <img class= "juegoPortada j-item" src="assets/wingspan.jpg" alt="portada del juego"></a>
-            </a>
+            <h3 class="juegoTitulo j-item">4</h3>
+            <img class= "juegoImg j-item" src="assets/wingspan.jpg" alt="portada del juego">
             <div class="juegoDescripcion j-item">
-                <p>Juego de Pajaros Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam distinctio necessitatibus delectus nobis illum beatae? Ad, eum omnis officiis molestias labore obcaecati nobis nihil ducimus.</p>
+                <p></p>
             </div>
             <div class="juegoPrecio j-item">
-                <a href="#"><span class="precioT"> Precio: $</span></a>
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">5</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">6</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">7</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">8</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
             </div>
         </article>
     </section>
         
+    <br>
+
+    <p id="juegosPs4" class="gamesCategory">Juegos PS4</p>
+  
+
+    <section class="articleContainer">
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">1</h3>
+                <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">2</h3>
+                <img class= "juegoImg j-item" src="assets/pic2649434.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">3</h3>
+            <img class= "juegoImg j-item" src="assets/pic6137456.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">4</h3>
+            <img class= "juegoImg j-item" src="assets/wingspan.jpg" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">5</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">6</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">7</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">8</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+    </section>
+
+    <br>
+
+    <p id="juegosXBox" class="gamesCategory">Juegos XBox</p>
+  
+
+    <section class="articleContainer">
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">1</h3>
+                <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">2</h3>
+                <img class= "juegoImg j-item" src="assets/pic2649434.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">3</h3>
+            <img class= "juegoImg j-item" src="assets/pic6137456.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">4</h3>
+            <img class= "juegoImg j-item" src="assets/wingspan.jpg" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">5</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">6</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">7</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">8</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+    </section>
+
+    <br>
+
+    <p id="accesorios" class="gamesCategory">Accesorios</p>
+  
+    <section class="articleContainer">
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">1</h3>
+                <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">2</h3>
+                <img class= "juegoImg j-item" src="assets/pic2649434.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">3</h3>
+            <img class= "juegoImg j-item" src="assets/pic6137456.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">4</h3>
+            <img class= "juegoImg j-item" src="assets/wingspan.jpg" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">5</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">6</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">7</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+        <article class="juegoContainer j-item">
+            <h3 class="juegoTitulo j-item">8</h3>
+            <img class= "juegoImg j-item" src="assets/pic5226311.png" alt="portada del juego">
+            <div class="juegoDescripcion j-item">
+                <p></p>
+            </div>
+            <div class="juegoPrecio j-item">
+                <span class="precioT"> Precio: $</span>
+            </div>
+        </article>
+    </section>
+
     <footer>
         <div class="siteTitle">
-            <h2>All4Gaming</h2>
+            <h2>Gaming4All</h2>
         </div>
         <div class="SM-icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-github"></i>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
         </div>
         <div class="siteInfo">
-            <p>Somos un local argentino que busca proveer lo que necesitan a todo tipo de jugadores. Ya sean de Playstation, Xbox, Nintendo, Juegos de mesa, o Pc.</p>
-            <p>otras cosas sobre nosotrs.</p>
+            <p>Somos un local argentino que busca proveer lo que necesitan a todo tipo de jugadores. Ya sean de Playstation, Xbox, Nintendo, o Pc.</p>
         </div>
-        <div class="contactInfo">
+        <div id="contact" class="contactInfo">
             <span id="Cnumero">+54 11 65319794</span>
-            <span id="Cemail"> all4gaming@gmail.com</span>
+            <span id="Cemail"> gaming4all@gmail.com</span>
             <span id="Cdireccion"> Av. Boyaca 374</span>
-            <span id="Chorarios"> Lunes a Viernes de 9:30hs a 16:30hs</span>
+            <span id="Chorarios"> Lunes a Viernes de 9:30hs a 17:30hs</span>
         </div>
-        <div class="siteMap">
-            <span class="map-item"><a href="#">home</a></span>
-            <span class="map-item"><a href="#">juegos</a></span>
-            <span class="map-item"><a href="#">juegos digitales</a></span>
-            <span class="map-item"><a href="#">juegos de mesa</a></span>
-            <span class="map-item break"></span>
-            <span class="map-item"><a href="#">noticias</a></span>
-            <span class="map-item"><a href="#">sobre nosotros</a></span>
-            <span class="map-item"><a href="#">contacto</a></span>
-        </div>
-        <div class="backUp">
-            <a href="#Top"><i class="fa-solid fa-circle-up"></i></a>
-        </div>
+        <ul class="siteMap">
+            <li class="map-item"><a href="#home">Home</a></li><br>
+            <li class="map-item"><a href="#juegosDigitales">Juegos Digitales</a></li><br>
+            <li class="map-item"><a href="#juegosPs4">Juegos PS</a></li><br>
+            <li class="map-item"><a href="#juegosXBox">Juegos Xbox</a></li>
+        </ul>
     </footer>
 
     
