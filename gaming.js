@@ -1,4 +1,5 @@
 /* Function for responsive Nav */
+
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -7,12 +8,13 @@ function myFunction() {
       x.className = "topnav";
     }
   }
-
   /* Function for carousel*/
+
 
 let slidePosition = 0;
 const slides = document.getElementsByClassName('carousel__item');
 const totalSlides = slides.length;
+
 
 /* Updates image by removing all images the visible class, adding the hidden class, then, making visible the one in display */
 
@@ -31,7 +33,6 @@ function moveToNextSlide() {
   } else {
     slidePosition++;
   }
-
   updateSlidePosition();
 }
 
@@ -41,7 +42,6 @@ function moveToPrevSlide() {
   } else {
     slidePosition--;
   }
-
   updateSlidePosition();
 }
 
@@ -284,4 +284,64 @@ fillData(4,accesorios);
 
 /* End of data distribution function */
 
+/* Alternative Object DB Model*/
 
+let juegos = document.querySelectorAll(".juegoDescripcion");
+
+console.log(juegos);
+
+console.log(juegos.length);
+
+console.log(juegos[0].children[1].innerHTML);
+
+class Juego {
+    static contadorJuegos= 0;
+
+    constructor(titulo,descripcion,precio) {
+        this._juegoID = ++Juego.contadorJuegos;
+        this._titulo = titulo;
+        this._descripcion = descripcion;
+        this._precio = precio;
+    }
+
+    get juegoID() {
+        return this._juegoID;
+    }
+
+    get juegoTitulo() {
+        return this._titulo;
+    }
+
+    get juegoDescripcion(){
+        return this._descripcion;
+    }
+
+    get juegoPrecio(){
+        return this._precio;
+    }
+
+    set juegoTitulo(titulo) {
+        this._titulo = titulo;
+    }
+
+    set juegoDescripcion(descripcion){
+        this._descripcion = descripcion;
+    }
+    
+    set juegoPrecio(precio){
+        this._precio = precio;
+    }
+
+    resumenJuego() {
+        console.log("El juego se llama: " + this.juegoTitulo, ", la descripcion es: " + this.juegoDescripcion + ", el precio es: " + this.juegoPrecio, " y el ID del juego es: " + this.juegoID);
+    }
+
+}
+
+let juego1 = new Juego("nierAutomata","Futiristic",4000);
+juego1.resumenJuego();
+
+let juego2 = new Juego("Ciberpunk 2077", "Futuristic", 5000);
+juego2.resumenJuego();
+
+/* End of Object DB Model */ 
