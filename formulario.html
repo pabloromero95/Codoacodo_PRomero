@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formStyles.css">
+    <title>Contactanos!</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav" id="myTopnav">
+            <a href="#home" class="active" id="navBar">Gaming4All</a> <!--Le cambié el nombre al ID.-->
+            <div class="dropdown">
+                <button class="dropbtn">Juegos
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Físicos</a>
+                  <a href="#">Digitales</a>
+                  <a href="#">De mesa</a>
+                </div>
+              </div> 
+            <a href="#news">Noticias</a>
+            <a href="#about">Sobre nosotros</a>
+            <a href="#contact">Contacto</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </nav>
+    </header>
+    <section id="formularioContacto">
+        <form action="send" method="get">
+            <fieldset id="datosPersonales">
+                <legend>Datos Personales</legend>
+                <div id="infoPersona">
+                    <label for="nombre">Nombre y Apellido: </label>
+                        <input type="text" name="nombreCompleto" id="nombre" required>
+                   <label for="hombre">Genero: </label>
+                        <label for="hombre">Masculino </label>
+                        <input type="radio" name="genero" id="hombre" value="Hombre">
+                        <label for="mujer">Femenino</label>
+                        <input type="radio" name="genero" id="mujer" value="Mujer">
+                        <label for="otro"> Otro</label>
+                        <input type="radio" name="genero" id="otro" value="Otro">
+                </div>
+                <div id="infoContacto">
+                    <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" required>
+                    <label for="telefono">Telefono: </label>
+                        <input type="tel" name="telefono" id="telefono">
+                    
+                </div>
+                <div id="locacion">
+                    <label for="provincia">Provincia: </label>
+                        <select name="provincia" id="provincia">
+                            <option> Buenos Aires </option>
+                            <option> Ciudad Autónoma de Buenos Aires </option>
+                            <option> Catamarca </option>
+                            <option> Chaco </option>
+                            <option> Chubut </option>
+                            <option> Córdoba </option>
+                            <option> Corrientes </option>
+                            <option> Entre Ríos </option>
+                            <option> Formosa </option>
+                            <option> Jujuy </option>
+                            <option> La Pampa </option>
+                            <option> La Rioja </option>
+                            <option> Mendoza </option>
+                            <option> Misiones </option>
+                            <option> Neuquén </option>
+                            <option> Río Negro </option>
+                            <option> Salta </option>
+                            <option> San Juan </option>
+                            <option> San Luis </option>
+                            <option> Santa Cruz </option>
+                            <option> Santa Fe </option>
+                            <option> Santiago del Estero </option>
+                            <option> Tierra del Fuego</option>
+                            <option> Tucumán </option>
+                        </select>
+                    <label for="ciudad">Ciudad: </label>
+                        <input type="text" name="ciudad" id="ciudad">
+                </div>
+            </fieldset>
+            <fieldset id="consulta">
+                <legend>Consulta</legend>
+                    <label for="Juegos Fisicos">Categoría de consulta: <label>
+                        <label for="Juegos Fisicos">Juegos Fisicos</label>
+                        <input type="checkbox" name="categoría" id="Juegos Fisicos" value="Juegos Fisicos">
+                        <label for="Juegos Digitales">Juegos Digitales</label>
+                        <input type="checkbox" name="categoría" id="Juegos Digitales" value="Juegos Digitales">
+                        <label for="Juegos de Mesa">Juegos de Mesa</label>
+                        <input type="checkbox" name="categoría" id="Juegos de Mesa" value="Juegos de Mesa">
+                        <label for="Etc"> Etc.</label>                      
+                        <input type="checkbox" name="categoría" id="Etc" value="Etc">
+                    <label for="productoRelacionado"> Producto Relacionado: </label>
+                        <input type="text" name="productoRelacionado" id="productoRelacionado">
+                    <textarea name="consulta" id="textoConsulta" cols="30" rows="10">Escribe tu consulta aquí...</textarea>
+            </fieldset>
+            <fieldset id="postConsulta">
+                <input type="checkbox" name="promocion" id="promocion">
+                <label for="promocion">Quiero Recibir Contenido Promocional</label>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Resetear">
+            </fieldset>
+        </form>
+    </section>
+        
+    <footer>
+        <div class="siteTitle">
+            <h2>All4Gaming</h2>
+        </div>
+        <div class="SM-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+        </div>
+        <div class="siteInfo">
+            <p>Somos un local argentino que busca proveer lo que necesitan a todo tipo de jugadores. Ya sean de Playstation, Xbox, Nintendo, Juegos de mesa, o Pc.</p>
+            <p>otras cosas sobre nosotrs.</p>
+        </div>
+        <div class="contactInfo">
+            <span id="Cnumero">+54 11 65319794</span>
+            <span id="Cemail"> all4gaming@gmail.com</span>
+            <span id="Cdireccion"> Av. Boyaca 374</span>
+            <span id="Chorarios"> Lunes a Viernes de 9:30hs a 16:30hs</span>
+        </div>
+        <div class="siteMap">
+            <span class="map-item"><a href="#">home</a></span>
+            <span class="map-item"><a href="#">juegos</a></span>
+            <span class="map-item"><a href="#">juegos digitales</a></span>
+            <span class="map-item"><a href="#">juegos de mesa</a></span>
+            <span class="map-item break"></span>
+            <span class="map-item"><a href="#">noticias</a></span>
+            <span class="map-item"><a href="#">sobre nosotros</a></span>
+            <span class="map-item"><a href="#">contacto</a></span>
+        </div>
+        <div class="backUp">
+            <a href="#Top"><i class="fa-solid fa-circle-up"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
