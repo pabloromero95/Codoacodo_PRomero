@@ -1,3 +1,7 @@
+  *{
+    font-size: 16px;
+  }
+  
   :root{
     font-size: 16px;
     --color_style1: #4172f9;
@@ -44,9 +48,10 @@
   }
   
   .carousel .carousel__item--visible {
-    z-index: -10;
+    z-index: -1;
     display: block;
     animation: fadeVisibility 0.5s;
+
   }
   
   .carousel .carousel__actions {
@@ -92,6 +97,10 @@
     position: fixed;
   }
 
+nav {
+  z-index: 1000;
+}
+
 .topnav {
   z-index: 100;
   overflow: hidden;
@@ -122,12 +131,9 @@
 .dropdown {
   float: left;
   overflow: hidden;
-  position: r;
-
 }
 
 .dropdown .dropbtn {
-  z-index: 100;
   font-size: 17px;    
   border: none;
   outline: none;
@@ -149,7 +155,7 @@
 }
 
 .dropdown-content a {
-  z-index: 10;
+  z-index: 100;
   float: none;
   color: black;
   padding: 12px 16px;
@@ -176,101 +182,83 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.gamesCategory{
+text-align: center;
+background-color: var(--color_style3);  
+font-size: 2.5rem;
+border: 3px solid var(--color_style2);
+}
+
 .j-item{
 min-width:0;
 min-height: 0;
+overflow-y: hidden;
 }
 .juegoContainer{
-  display: grid;
-  max-width: 600px;
-  margin: 5vw;
-  max-height: 600px;
-  height: 300px;
-  grid-template: 1fr 3fr 1fr/ 1fr 2fr;
-  grid-template-areas: 
-            "header header"
-            "image description"
-            "price price";
-  gap: 5px;
-  min-width: 200px;
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 45vh;
+  min-height: 400px;
+  width: 90%;
   background-color: var(--color_style3);
-  margin: 5vh 1vw 0 1vw;
+  margin: 5vh 2vw 0 2vw;
   border: 3px solid var(--color_font1);
   border-radius: 1rem;
   box-shadow:  5px 5px 10px #23185a;
-  justify-self: center;
-    align-self: center;
+  overflow: hidden;
 }
 .juegoTitulo{
-  grid-area:header;
-  justify-self:center;
-  height: 15%;
-  min-height: 1.5rem;
-  flex-basis: 10%;
-  flex-grow: 1;
-  flex-shrink: 1;
+display: flex;
+height: 15%;
 }
-.juegoImg{
-  grid-area: image;
-  display: inline-flex;
-  width: 100%;
-  height: 60%;
-  min-width: 100px;
-  flex-basis: 40%;
-  flex-grow: 3;
-  flex-shrink: 2;
-}
-.juegoPortada{
-  max-width: 100%;
-  width: 100%;
-  height:auto;
-  max-height:20vh;
-  object-fit:contain;
-}
-.juegoDescripcion{
-  grid-area:description;
+.juegoContainer img{
   display: block;
+  align-self: center;
+  width: 95%;
+  height: auto;
+  object-fit:scale-down;
+
+}
+
+.juegoDescripcion{
+  display: block;
+  padding: 6px;
   height:100%;
-  max-height: 200px;
+  max-height: 150px;
   width: 90%;
+  border: 2px solid var(--color_style2);
   border-radius: 0 20px;
   background-color: var(--color_style1);
+  text-align: center;
   margin:10px;
   text-align: center;
-  flex-basis: 40%;
-  flex-grow:3;
-  flex-shrink: 2;
-  overflow: auto;
+  overflow: hidden;
 }
 .juegoPrecio{
+  display: flex;
   grid-area:price;
   height: 10%;
   min-height: 2rem;
-  justify-self: center;
-  align-self: center;
-  flex-basis: 10%;
-  flex-grow:1;
-  flex-shrink: 1;
-}
-.juegoPrecio a{
-  
   justify-self: center;
   align-self: center;
 }
 
 footer{
   display: grid;
-  font-size: 62.5%;
   max-height: 200px;
-  height: 10vh;
+  height: auto;
   margin-top: 10%;
-  grid-template-rows: 2fr 6fr 2fr;
+  padding-left: 10px;
+  grid-template-rows: 2fr 6fr;
   grid-template-columns: 3fr 2fr 1fr;
   grid-template-areas:
-              'nombre iconos up'
-              'infoNosotros Contacto up'
-              'mapa_sitio mapa_sitio mapa_sitio';
+              'nombre iconos mapa_sitio'
+              'infoNosotros Contacto mapa_sitio';
+  background-color: var(--color_style1);
+  border-top: 2px solid black;
 }
 
 footer .siteTitle{
@@ -310,10 +298,14 @@ footer .siteMap{
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.siteMap .break{
-  flex-basis: 100%;
-  height: 0;
+.siteMap li {
+  width: 100%;
+  display: block;
+  align-self: auto;
+  justify-self: center;
+
 }
+
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
@@ -350,9 +342,9 @@ footer .siteMap{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 55vh;
-    min-width: 200px;
-    max-width: 400px;
+    height: 45vh;
+    min-height: 400px;
+    width: 90%;
     background-color: var(--color_style3);
     margin: 5vh 2vw 0 2vw;
     border: 3px solid var(--color_font1);
@@ -360,15 +352,10 @@ footer .siteMap{
     box-shadow:  5px 5px 10px #23185a;
     
   }
-  
-  .juegoPortada{
-    max-height:20vh;
-    object-fit:contain;
-    justify-content: flex-start;
-  }
-  
-  .juegoImg img {
+
+  .juegoContainer img {
     height: 90%;
+    width: auto;
     margin: auto;
     align-items: center;
   }
@@ -381,32 +368,74 @@ footer .siteMap{
     background-color: var(--color_style1);
     margin:10px;
     text-align: center;
+    overflow-y: auto;
   }
   
   .juegoDescripcion p,span {
     font-family: 'Petrona', 'Fraunces','serif';
   }
+  .juegoTitulo h3{
+    height: 1rem;
+  }
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 1300px) {
   /* Tablet Code*/
-  .articleContainer{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    
-  }
   .juegoContainer{
     max-width: 25rem;
+    height: 40vh;
   }
-}
-@media screen and (min-width:1600px){
+  :root{
+    font-size: 18px;
+  }
+
+  .juegoImg{
+    width: 100%;
+    height: auto;
+    margin:6px;
+  }
+
+  .juegoDescripcion{
+  overflow-y: hidden;
+  }
+
   .articleContainer{
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    font-size: 18px;
   }
 }
-@media screen and (min-width: 1295px){ /*Este media screen no esta funcionando. Me aplica el margin-top 10vh con un viewport de 320px*/
-  
+@media screen and (min-width:1300px){
+  .juegoContainer{
+    max-width: 25rem;
+    height: 40vh;
+  }
+  :root{
+    font-size: 18px;
+  }
+
+  .juegoImg{
+    width: 100%;
+    height: auto;
+    margin:6px;
+  }
+
+  .juegoDescripcion{
+  overflow: hidden;
+  margin: 10px;
+  }
+
+  .articleContainer{
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  footer {
+    font-size: 18px;
+  }
 }
