@@ -94,7 +94,7 @@
 
   header {
     display: block;
-    position: fixed;
+    position: sticky;
   }
 
 nav {
@@ -184,9 +184,13 @@ nav {
 }
 
 .gamesCategory{
+display: flex;
 text-align: center;
+align-items: center;
+justify-content: center;
 background-color: var(--color_style3);  
 font-size: 2.5rem;
+height: 4rem;
 border: 3px solid var(--color_style2);
 }
 
@@ -272,7 +276,7 @@ footer .SM-icons{
   justify-self: center;
 }
 .SM-icons .fa-brands{
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-left: 0.4rem;
 }
 footer .siteInfo{
