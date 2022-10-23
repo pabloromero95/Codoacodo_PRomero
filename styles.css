@@ -256,11 +256,10 @@ footer{
   height: auto;
   margin-top: 10%;
   padding-left: 10px;
-  grid-template-rows: 2fr 6fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 3fr 2fr 1fr;
   grid-template-areas:
-              'nombre iconos mapa_sitio'
-              'infoNosotros Contacto mapa_sitio';
+              'nombre mapa_sitio1 mapa_sitio2';
   background-color: var(--color_style1);
   border-top: 2px solid black;
 }
@@ -277,8 +276,13 @@ footer .SM-icons{
 }
 .SM-icons .fa-brands{
   font-size: 1.5rem;
-  margin-left: 0.4rem;
+  margin: 0.4rem;
 }
+
+.fa-brands:hover {
+  color: white;
+}
+
 footer .siteInfo{
   grid-area:infoNosotros;
 }
@@ -296,17 +300,27 @@ footer .backUp{
 .fa-circle-up{
   font-size: 2rem;
 }
-footer .siteMap{
-  grid-area: mapa_sitio;
-  display: inline-flex;
+footer .siteMap1{
+  grid-area: mapa_sitio1;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.siteMap li {
+
+footer .siteMap2{
+  grid-area: mapa_sitio2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.siteMap1 li, .siteMap2 li {
   width: 100%;
-  display: block;
-  align-self: auto;
-  justify-self: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  margin-top: 2px;
 
 }
 
@@ -381,6 +395,41 @@ footer .siteMap{
   .juegoTitulo h3{
     height: 1rem;
   }
+}
+
+#aboutUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 2rem auto;
+  padding: 10px;
+  background-color: var(--color_style3);
+  border-radius: 20px;
+  border: 3px solid black;
+  box-shadow:  5px 5px 10px #23185a;
+
+}
+
+.aboutTopContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.aboutTopContainer h3 {
+  font-size: 1.4rem;
+}
+
+.aboutBotContainer{
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
 }
 
 @media screen and (min-width: 600px) and (max-width: 1300px) {
