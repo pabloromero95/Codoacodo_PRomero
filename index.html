@@ -409,32 +409,35 @@
         </article>
     </section>
 
-<<<<<<< HEAD
     <h2 id="seccForm" class="gamesCategory">Contactanos!</h2>
 
     <section id="formularioContacto">
-        <form action="send" method="post">
+        <form name="formularioConsulta" action="/gaming.js" method="post" onsubmit="return validateForm()">
             <fieldset id="datosPersonales">
                 <legend>Datos Personales</legend>
-                <div id="infoPersona">
-                    <label for="nombre">Nombre y Apellido: </label>
-                        <input type="text" name="nombreCompleto" id="nombre" required>
-                   <label>Genero: </label>
+                    <div id="nombreContacto">
+                        <label for="nombre">Nombre y Apellido: </label>
+                            <input type="text" name="nombreCompleto" id="nombre" required>
+                    </div>
+                    <div id="generoContacto">
+                        <label>Genero: </label>
                         <input type="radio" name="genero" id="hombre" value="Hombre" class="espInput">
                         <label for="hombre" class="espLabel">Masculino </label>
                         <input type="radio" name="genero" id="mujer" value="Mujer" class="espInput">
                         <label for="mujer" class="espLabel">Femenino</label>
                         <input type="radio" name="genero" id="otro" value="Otro" class="espInput">
                         <label for="otro" class="espLabel"> Otro</label>
-                </div>
-                <div id="infoContacto">
+                    </div>
+                <div id="emailContacto">
                     <label for="email">Email: </label>
                         <input type="email" name="email" id="email" required>
-                    <label for="telefono">Telefono: </label>
+                </div>
+                <div id="telefonoContacto">    
+                        <label for="telefono">Telefono: </label>
                         <input type="tel" name="telefono" id="telefono">
                     
                 </div>
-                <div id="locacion">
+                <div id="provinciaContacto">
                     <label for="provincia">Provincia: </label>
                         <select name="provincia" id="provincia">
                             <option> Buenos Aires </option>
@@ -462,6 +465,8 @@
                             <option> Tierra del Fuego</option>
                             <option> Tucumán </option>
                         </select>
+                </div>
+                <div id="ciudadContacto">
                     <label for="ciudad">Ciudad: </label>
                         <input type="text" name="ciudad" id="ciudad">
                 </div>
@@ -477,22 +482,28 @@
                         <input type="checkbox" name="categoría" id="Juegos de Mesa" value="Juegos de Mesa" class="espInput">
                         <label for="Juegos de Mesa" class="espLabel">Juegos de Mesa</label>
                         <input type="checkbox" name="categoría" id="Etc" value="Etc" class="espInput">
-                        <label for="Etc" class="espLabel"> Etc.</label>                      
+                        <label for="Etc" class="espLabel"> Etc.</label>      
+                </div>
+                <div class="productoRelacionado">              
                     <label for="productoRelacionado"> Producto Relacionado: </label>
                         <input type="text" name="productoRelacionado" id="productoRelacionado">
-                    <textarea name="consulta" id="textoConsulta" cols="30" rows="10">Escribe tu consulta aquí...</textarea>
+                </div>
+                <div class="divConsulta">
+                    <label for="consulta">Consulta:</label>
+                    <textarea name="consulta" id="textoConsulta" cols="50" rows="10" minlength="10" maxlength="250" placeholder="Escribe tu consulta aquí..." required></textarea>
                 </div>
             </fieldset>
             <fieldset id="postConsulta">
                 <div>
                     <input type="checkbox" name="promocion" id="promocion" class="espInput">
                     <label for="promocion" class="espLabel">Quiero Recibir Contenido Promocional</label>
+                </div>
+                <div class="buttonsDiv">
                     <input type="submit" value="Enviar" class="formButtons">
                     <input type="reset" value="Resetear" class="formButtons">
                 </div>
             </fieldset>
         </form>
-=======
     <section id="aboutUs">
         <div class="aboutTopContainer">
             <div>
@@ -519,7 +530,6 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.2624562075634!2d-58.461792684919246!3d-34.62280728045458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca211034eb89%3A0x611cd9220a12a7a!2sAv.%20Boyac%C3%A1%20374%2C%20C1406BHF%20CABA!5e0!3m2!1ses!2sar!4v1666523867919!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
->>>>>>> e55bc2a74f4a7fa40d9a37189821d7ba9d294755
     </section>
 
     <footer>
@@ -528,7 +538,6 @@
             <p>Copyright - 2022. Todos los derechos reservados. </p>
             <p>Diseñado para el Programa Codo a Codo 4.0</p>
         </div>
-<<<<<<< HEAD
         <div class="SM-icons">
             <a href="https://github.com/pabloromero95/Codoacodo_PythonBrothers"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://github.com/pabloromero95/Codoacodo_PythonBrothers"><i class="fa-brands fa-twitter"></i></a>
@@ -546,7 +555,6 @@
         </div>
         <ul class="siteMap">
             <li class="map-item"><a href="#home">Home</a></li><br>
-=======
 
         <ul class="siteMap1">
             <li class="map-item"><a href="#home">Home</a></li>
@@ -554,7 +562,6 @@
             <li class="map-item"><a href="#aboutUs">Sobre nosotros</a></li>
         </ul>
         <ul class="siteMap2">
->>>>>>> e55bc2a74f4a7fa40d9a37189821d7ba9d294755
             <li class="map-item"><a href="#juegosDigitales">Juegos Digitales</a></li><br>
             <li class="map-item"><a href="#juegosPs4">Juegos PS</a></li>
             <li class="map-item"><a href="#juegosXBox">Juegos Xbox</a></li>

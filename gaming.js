@@ -344,4 +344,7 @@ juego1.resumenJuego();
 let juego2 = new Juego("Ciberpunk 2077", "Futuristic", 5000);
 juego2.resumenJuego();
 
+function validateForm(){
+  
+}
 /* End of Object DB Model */ 
