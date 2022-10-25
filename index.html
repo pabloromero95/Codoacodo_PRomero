@@ -61,7 +61,7 @@
 
       <br>
 
-      <p id="juegosDigitales" class="gamesCategory">Juegos Digitales</p>
+      <h2 id="juegosDigitales" class="gamesCategory">Juegos Digitales</h2>
     
     <section class="articleContainer">
         <article class="juegoContainer j-item">
@@ -148,7 +148,7 @@
         
     <br>
 
-    <p id="juegosPs4" class="gamesCategory">Juegos PS4</p>
+    <h2 id="juegosPs4" class="gamesCategory">Juegos PS4</h2>
   
 
     <section class="articleContainer">
@@ -236,7 +236,7 @@
 
     <br>
 
-    <p id="juegosXBox" class="gamesCategory">Juegos XBox</p>
+    <h2 id="juegosXBox" class="gamesCategory">Juegos XBox</h2>
   
 
     <section class="articleContainer">
@@ -324,7 +324,7 @@
 
     <br>
 
-    <p id="accesorios" class="gamesCategory">Accesorios</p>
+    <h2 id="accesorios" class="gamesCategory">Accesorios</h2>
   
     <section class="articleContainer">
         <article class="juegoContainer j-item">
@@ -407,6 +407,90 @@
                 <span class="precioT"> Precio: $</span>
             </div>
         </article>
+    </section>
+
+    <h2 id="seccForm" class="gamesCategory">Contactanos!</h2>
+
+    <section id="formularioContacto">
+        <form action="send" method="post">
+            <fieldset id="datosPersonales">
+                <legend>Datos Personales</legend>
+                <div id="infoPersona">
+                    <label for="nombre">Nombre y Apellido: </label>
+                        <input type="text" name="nombreCompleto" id="nombre" required>
+                   <label>Genero: </label>
+                        <input type="radio" name="genero" id="hombre" value="Hombre" class="espInput">
+                        <label for="hombre" class="espLabel">Masculino </label>
+                        <input type="radio" name="genero" id="mujer" value="Mujer" class="espInput">
+                        <label for="mujer" class="espLabel">Femenino</label>
+                        <input type="radio" name="genero" id="otro" value="Otro" class="espInput">
+                        <label for="otro" class="espLabel"> Otro</label>
+                </div>
+                <div id="infoContacto">
+                    <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" required>
+                    <label for="telefono">Telefono: </label>
+                        <input type="tel" name="telefono" id="telefono">
+                    
+                </div>
+                <div id="locacion">
+                    <label for="provincia">Provincia: </label>
+                        <select name="provincia" id="provincia">
+                            <option> Buenos Aires </option>
+                            <option> Ciudad Autónoma de Buenos Aires </option>
+                            <option> Catamarca </option>
+                            <option> Chaco </option>
+                            <option> Chubut </option>
+                            <option> Córdoba </option>
+                            <option> Corrientes </option>
+                            <option> Entre Ríos </option>
+                            <option> Formosa </option>
+                            <option> Jujuy </option>
+                            <option> La Pampa </option>
+                            <option> La Rioja </option>
+                            <option> Mendoza </option>
+                            <option> Misiones </option>
+                            <option> Neuquén </option>
+                            <option> Río Negro </option>
+                            <option> Salta </option>
+                            <option> San Juan </option>
+                            <option> San Luis </option>
+                            <option> Santa Cruz </option>
+                            <option> Santa Fe </option>
+                            <option> Santiago del Estero </option>
+                            <option> Tierra del Fuego</option>
+                            <option> Tucumán </option>
+                        </select>
+                    <label for="ciudad">Ciudad: </label>
+                        <input type="text" name="ciudad" id="ciudad">
+                </div>
+            </fieldset>
+            <fieldset id="consulta">
+                <legend>Consulta</legend>
+                <div>
+                    <label for="Juegos Fisicos">Categoría de consulta:</label>
+                        <input type="checkbox" name="categoría" id="Juegos Fisicos" value="Juegos Fisicos" class="espInput">
+                        <label for="Juegos Fisicos" class="espLabel">Juegos Fisicos</label>
+                        <input type="checkbox" name="categoría" id="Juegos Digitales" value="Juegos Digitales" class="espInput">
+                        <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label>
+                        <input type="checkbox" name="categoría" id="Juegos de Mesa" value="Juegos de Mesa" class="espInput">
+                        <label for="Juegos de Mesa" class="espLabel">Juegos de Mesa</label>
+                        <input type="checkbox" name="categoría" id="Etc" value="Etc" class="espInput">
+                        <label for="Etc" class="espLabel"> Etc.</label>                      
+                    <label for="productoRelacionado"> Producto Relacionado: </label>
+                        <input type="text" name="productoRelacionado" id="productoRelacionado">
+                    <textarea name="consulta" id="textoConsulta" cols="30" rows="10">Escribe tu consulta aquí...</textarea>
+                </div>
+            </fieldset>
+            <fieldset id="postConsulta">
+                <div>
+                    <input type="checkbox" name="promocion" id="promocion" class="espInput">
+                    <label for="promocion" class="espLabel">Quiero Recibir Contenido Promocional</label>
+                    <input type="submit" value="Enviar" class="formButtons">
+                    <input type="reset" value="Resetear" class="formButtons">
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <footer>

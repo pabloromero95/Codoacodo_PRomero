@@ -94,7 +94,8 @@
 
   header {
     display: block;
-    position: sticky;
+    position: fixed;
+    z-index: 9999;
   }
 
 nav {
@@ -250,6 +251,38 @@ height: 15%;
   align-self: center;
 }
 
+fieldset{
+  background-color: var(--color_style3);
+  display: flex;
+  flex-direction: column;
+}
+fieldset div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+fieldset label{
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.espInput{
+  width: 10%;
+}
+.espLabel{
+width: 90%;
+margin-top: unset;
+}
+#promocion{
+  height: 1rem;
+  align-self: center;
+}
+.formButtons{
+  margin: 0.6rem;
+}
+legend{
+  background-color: var(--color_style3);
+  border: 0.2rem groove white;
+}
 footer{
   display: grid;
   max-height: 200px;
