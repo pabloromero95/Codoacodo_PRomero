@@ -279,7 +279,7 @@
     align-items: center;
   }
 
-  #formularioContacto {
+  #formulario_article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,22 +292,22 @@
   }
 
 
-  #formularioContacto input:required {
+  #formulario_article input:required {
     outline: 0.2rem solid transparent;
     border: 0.2rem solid transparent;
   }
 
-  #formularioContacto input:empty {
+  #formulario_article input:empty {
     outline: 0.2rem solid transparent;
     border: 0.2rem solid transparent;
   }
 
-  #formularioContacto input:invalid {
+  #formulario_article input:invalid {
     outline: 0.1rem solid #f00;
     border: 0.1rem solid #f00;
   }
 
-  #formularioContacto input:valid {
+  #formulario_article input:valid {
     outline: 0.1rem solid #0f0;
     border: 0.1rem solid #0f0;
   }

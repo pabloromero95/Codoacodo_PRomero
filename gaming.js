@@ -453,7 +453,7 @@ juego2.resumenJuego();
 const doc = document;
 function docGEBI(selector) { return doc.getElementById(selector); };
 
-docGEBI("#formularioContacto").addEventListener("submit", validateForm);
+docGEBI("formulario_article").addEventListener("submit", validateForm);
 // #submitBtn
 
 function validateForm(event) {
