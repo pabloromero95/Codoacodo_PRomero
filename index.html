@@ -112,6 +112,13 @@
         <div class="juegoDescripcion j-item">
           <p></p>
         </div>
+      </div>
+
+      <br>
+
+      <h2 id="juegosDigitales" class="gamesCategory">Juegos Digitales</h2>
+      
+    <section class="articleContainer">
         <div class="juegoPrecio j-item">
           <span class="precioT"> Precio: $</span>
         </div>
@@ -170,7 +177,9 @@
 
     <br />
 
-    <p id="juegosPs4" class="gamesCategory">Juegos PS4</p>
+
+    <h2 id="juegosPs4" class="gamesCategory">Juegos PS4</h2>
+
 
     <section class="articleContainer">
       <article class="juegoContainer j-item">
@@ -257,8 +266,9 @@
 
     <br />
 
-    <p id="juegosXBox" class="gamesCategory">Juegos XBox</p>
 
+    <h2 id="juegosXBox" class="gamesCategory">Juegos XBox</h2>
+ 
     <section class="articleContainer">
       <article class="juegoContainer j-item">
         <h3 class="juegoTitulo j-item"></h3>
@@ -344,8 +354,8 @@
 
     <br />
 
-    <p id="accesorios" class="gamesCategory">Accesorios</p>
-
+    <h2 id="accesorios" class="gamesCategory">Accesorios</h2>
+  
     <section class="articleContainer">
       <article class="juegoContainer j-item">
         <h3 class="juegoTitulo j-item"></h3>
@@ -429,6 +439,101 @@
       </article>
     </section>
 
+    <h2 id="seccForm" class="gamesCategory">Contactanos!</h2>
+
+    <section id="formularioContacto">
+        <form name="formularioConsulta" action="/gaming.js" method="post" onsubmit="return validateForm()">
+            <fieldset id="datosPersonales">
+                <legend>Datos Personales</legend>
+                    <div id="nombreContacto">
+                        <label for="nombre">Nombre y Apellido: </label>
+                            <input type="text" name="nombreCompleto" id="nombre" required pattern="\w[\d]">
+                    </div>
+                    <div id="generoContacto">
+                        <label>Genero: </label>
+                        <input type="radio" name="genero" id="hombre" value="Hombre" class="espInput">
+                        <label for="hombre" class="espLabel">Masculino </label>
+                        <input type="radio" name="genero" id="mujer" value="Mujer" class="espInput">
+                        <label for="mujer" class="espLabel">Femenino</label>
+                        <input type="radio" name="genero" id="otro" value="Otro" class="espInput">
+                        <label for="otro" class="espLabel"> Otro</label>
+                    </div>
+                <div id="emailContacto">
+                    <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" placeholder="youremail@default.com" required>
+                </div>
+                <div id="telefonoContacto">    
+                        <label for="telefono">Telefono: </label>
+                        <input type="tel" name="telefono" id="telefono" placeholder="+54 011 1111-1111">
+                    
+                </div>
+                <div id="provinciaContacto">
+                    <label for="provincia">Provincia: </label>
+                        <select name="provincia" id="provincia">
+                            <option> Buenos Aires </option>
+                            <option> Ciudad Autónoma de Buenos Aires </option>
+                            <option> Catamarca </option>
+                            <option> Chaco </option>
+                            <option> Chubut </option>
+                            <option> Córdoba </option>
+                            <option> Corrientes </option>
+                            <option> Entre Ríos </option>
+                            <option> Formosa </option>
+                            <option> Jujuy </option>
+                            <option> La Pampa </option>
+                            <option> La Rioja </option>
+                            <option> Mendoza </option>
+                            <option> Misiones </option>
+                            <option> Neuquén </option>
+                            <option> Río Negro </option>
+                            <option> Salta </option>
+                            <option> San Juan </option>
+                            <option> San Luis </option>
+                            <option> Santa Cruz </option>
+                            <option> Santa Fe </option>
+                            <option> Santiago del Estero </option>
+                            <option> Tierra del Fuego</option>
+                            <option> Tucumán </option>
+                        </select>
+                </div>
+                <div id="ciudadContacto">
+                    <label for="ciudad">Ciudad: </label>
+                        <input type="text" name="ciudad" id="ciudad">
+                </div>
+            </fieldset>
+            <fieldset id="consulta">
+                <legend>Consulta</legend>
+                <div>
+                    <label for="Juegos Fisicos">Categoría de consulta:</label>
+                        <input type="checkbox" name="categoría" id="juegos_Fisicos" value="Juegos Fisicos" class="espInput">
+                        <label for="Juegos Fisicos" class="espLabel">Juegos Fisicos</label>
+                        <input type="checkbox" name="categoría" id="juegos_Digitales" value="Juegos Digitales" class="espInput">
+                        <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label>
+                        <input type="checkbox" name="categoría" id="juegos_de_Mesa" value="Juegos de Mesa" class="espInput">
+                        <label for="Juegos de Mesa" class="espLabel">Juegos de Mesa</label>
+                        <input type="checkbox" name="categoría" id="etc" value="Etc" class="espInput">
+                        <label for="Etc" class="espLabel"> Etc.</label>      
+                </div>
+                <div class="productoRelacionado">              
+                    <label for="productoRelacionado"> Producto Relacionado: </label>
+                        <input type="text" name="productoRelacionado" id="productoRelacionado">
+                </div>
+                <div class="divConsulta">
+                    <label for="consulta">Consulta:</label>
+                    <textarea name="consulta" id="textoConsulta" cols="50" rows="10" minlength="10" maxlength="250" placeholder="Escribe tu consulta aquí..." required></textarea>
+                </div>
+            </fieldset>
+            <fieldset id="postConsulta">
+                <div>
+                    <input type="checkbox" name="promocion" id="promocion" class="espInput">
+                    <label for="promocion" class="espLabel">Quiero Recibir Contenido Promocional</label>
+                </div>
+                <div class="buttonsDiv">
+                    <input type="submit" value="Enviar" class="formButtons" id="submitBtn">
+                    <input type="reset" value="Resetear" class="formButtons" id="resetBtn">
+                </div>
+            </fieldset>
+        </form>
     <section id="aboutUs">
       <article class="gameList">
         <h3>Top 4 Minecraft Editions</h3>
@@ -501,12 +606,12 @@
     </section>
 
     <footer>
+    
       <div class="siteTitle">
         <h2>Gaming4All</h2>
         <p>Copyright - 2022. Todos los derechos reservados.</p>
         <p>Diseñado para el Programa Codo a Codo 4.0</p>
       </div>
-
       <ul class="siteMap1">
         <li class="map-item"><a href="#home">Home</a></li>
         <li class="map-item"><a href="#news">Noticias</a></li>
