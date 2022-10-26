@@ -417,7 +417,7 @@
                 <legend>Datos Personales</legend>
                     <div id="nombreContacto">
                         <label for="nombre">Nombre y Apellido: </label>
-                            <input type="text" name="nombreCompleto" id="nombre" required>
+                            <input type="text" name="nombreCompleto" id="nombre" required pattern="\w[\d]">
                     </div>
                     <div id="generoContacto">
                         <label>Genero: </label>
@@ -430,11 +430,11 @@
                     </div>
                 <div id="emailContacto">
                     <label for="email">Email: </label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" placeholder="youremail@default.com" required>
                 </div>
                 <div id="telefonoContacto">    
                         <label for="telefono">Telefono: </label>
-                        <input type="tel" name="telefono" id="telefono">
+                        <input type="tel" name="telefono" id="telefono" placeholder="+54 011 1111-1111">
                     
                 </div>
                 <div id="provinciaContacto">
@@ -475,13 +475,13 @@
                 <legend>Consulta</legend>
                 <div>
                     <label for="Juegos Fisicos">Categoría de consulta:</label>
-                        <input type="checkbox" name="categoría" id="Juegos Fisicos" value="Juegos Fisicos" class="espInput">
+                        <input type="checkbox" name="categoría" id="juegos_Fisicos" value="Juegos Fisicos" class="espInput">
                         <label for="Juegos Fisicos" class="espLabel">Juegos Fisicos</label>
-                        <input type="checkbox" name="categoría" id="Juegos Digitales" value="Juegos Digitales" class="espInput">
+                        <input type="checkbox" name="categoría" id="juegos_Digitales" value="Juegos Digitales" class="espInput">
                         <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label>
-                        <input type="checkbox" name="categoría" id="Juegos de Mesa" value="Juegos de Mesa" class="espInput">
+                        <input type="checkbox" name="categoría" id="juegos_de_Mesa" value="Juegos de Mesa" class="espInput">
                         <label for="Juegos de Mesa" class="espLabel">Juegos de Mesa</label>
-                        <input type="checkbox" name="categoría" id="Etc" value="Etc" class="espInput">
+                        <input type="checkbox" name="categoría" id="etc" value="Etc" class="espInput">
                         <label for="Etc" class="espLabel"> Etc.</label>      
                 </div>
                 <div class="productoRelacionado">              
@@ -499,8 +499,8 @@
                     <label for="promocion" class="espLabel">Quiero Recibir Contenido Promocional</label>
                 </div>
                 <div class="buttonsDiv">
-                    <input type="submit" value="Enviar" class="formButtons">
-                    <input type="reset" value="Resetear" class="formButtons">
+                    <input type="submit" value="Enviar" class="formButtons" id="submitBtn">
+                    <input type="reset" value="Resetear" class="formButtons" id="resetBtn">
                 </div>
             </fieldset>
         </form>

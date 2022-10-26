@@ -1,7 +1,10 @@
   *{
     font-size: 16px;
   }
-  
+  input:invalid{
+    outline: 2px solid red;
+    border-radius: 5px;
+  }
   :root{
     font-size: 16px;
     --color_style1: #4172f9;

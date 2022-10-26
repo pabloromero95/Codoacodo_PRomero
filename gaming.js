@@ -345,6 +345,24 @@ let juego2 = new Juego("Ciberpunk 2077", "Futuristic", 5000);
 juego2.resumenJuego();
 
 function validateForm(){
-  
+  let nombreF = document.getElementById("nombre")
+  let hombreF = document.getElementById("hombre")
+  let mujerF = document.getElementById("mujer")
+  let otroF = document.getElementById("otro")
+  let emailF = document.getElementById("email")
+  let telefonoF = document.getElementById("telefono")
+  let provinciaF = document.getElementById("provincia")
+  let ciudadF = document.getElementById("ciudad")
+  let juegosFF = document.getElementById("juegos_Fisicos")
+  let juegosDF = document.getElementById("juegos_Digitales")
+  let juegosMF = document.getElementById("juegos_de_Mesa")
+  let etcF = document.getElementById("etc")
+  let productoF = document.getElementById("productoRelacionado")
+  let textoF = document.getElementById("textoConsulta")
+  let promocionF = document.getElementById("promocion")
+  let submitF = document.getElementById("submitBtn")
+  let resetF = document.getElementById("resetBtn")
+
+  console.log("test" + nombreF.id + resetF.id)
 }
 /* End of Object DB Model */ 
