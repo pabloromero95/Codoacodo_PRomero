@@ -345,7 +345,7 @@ fillData(4, accesorios);
 /* Function of GamePrices API*/
 
 const options = {
-  
+
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "b4b687758fmshbe0ef1cd7d3a433p1304f4jsn35c93d8250ea",
@@ -356,33 +356,32 @@ const options = {
 let responseFiltered = [];
 
 
-fetch("https://game-prices.p.rapidapi.com/games?title=minecraft&region=us&offset=0&limit=49",options)
-.then((response) => response.json())
-.then(({games}) => responseFiltered = games.filter((game) => game.type==='game' && game.hasOwnProperty("currentLowestPrice")))
-.then(fillList)
-.catch((err) => console.error(err));
+fetch("https://game-prices.p.rapidapi.com/games?title=minecraft&region=us&offset=0&limit=49", options)
+  .then((response) => response.json())
+  .then(({ games }) => responseFiltered = games.filter((game) => game.type === 'game' && game.hasOwnProperty("currentLowestPrice")))
+  .then(fillList)
+  .catch((err) => console.error(err));
 
-function showResponseFiltered()
-{
-  responseFiltered.map((element) => log("El precios más rentable es:",element.currentLowestPrice));
+function showResponseFiltered() {
+  responseFiltered.map((element) => log("El precios más rentable es:", element.currentLowestPrice));
 };
 
 let listNames = document.querySelectorAll(".tableName");
 let listLowPrice = document.querySelectorAll(".tableLow");
 
-function fillGameNames(){
+function fillGameNames() {
   for (let i = 0; i < responseFiltered.length; i++) {
     listNames[i].textContent = responseFiltered[i].name;
   }
 }
 
-function fillGameLowPrice(){
+function fillGameLowPrice() {
   for (let i = 0; i < responseFiltered.length; i++) {
     listLowPrice[i].textContent = Math.round(responseFiltered[i].currentLowestPrice * 290);
   }
 }
 
-function fillList(){
+function fillList() {
   responseFiltered.pop();
   fillGameNames();
   fillGameLowPrice();
@@ -448,28 +447,35 @@ juego1.resumenJuego();
 let juego2 = new Juego("Ciberpunk 2077", "Futuristic", 5000);
 juego2.resumenJuego();
 
-
-function validateForm(){
-  let nombreF = document.getElementById("nombre")
-  let hombreF = document.getElementById("hombre")
-  let mujerF = document.getElementById("mujer")
-  let otroF = document.getElementById("otro")
-  let emailF = document.getElementById("email")
-  let telefonoF = document.getElementById("telefono")
-  let provinciaF = document.getElementById("provincia")
-  let ciudadF = document.getElementById("ciudad")
-  let juegosFF = document.getElementById("juegos_Fisicos")
-  let juegosDF = document.getElementById("juegos_Digitales")
-  let juegosMF = document.getElementById("juegos_de_Mesa")
-  let etcF = document.getElementById("etc")
-  let productoF = document.getElementById("productoRelacionado")
-  let textoF = document.getElementById("textoConsulta")
-  let promocionF = document.getElementById("promocion")
-  let submitF = document.getElementById("submitBtn")
-  let resetF = document.getElementById("resetBtn")
-
-  console.log("test" + nombreF.id + resetF.id)
-}
- End of Object DB Model */ 
+ End of Object DB Model*/
 
 
+const doc = document;
+function docGEBI(selector) { return doc.getElementById(selector); };
+
+docGEBI("#formularioContacto").addEventListener("submit", validateForm);
+// #submitBtn
+
+function validateForm(event) {
+  event.preventDefault();
+  let nombreF = docGEBI("nombre");
+  let hombreF = docGEBI("hombre");
+  let mujerF = docGEBI("mujer");
+  let otroF = docGEBI("otro");
+  let emailF = docGEBI("email");
+  let telefonoF = docGEBI("telefono");
+  let provinciaF = docGEBI("provincia");
+  let ciudadF = docGEBI("ciudad");
+  let juegosFF = docGEBI("juegos_Fisicos");
+  let juegosDF = docGEBI("juegos_Digitales");
+  let juegosMF = docGEBI("juegos_de_Mesa");
+  let otros = docGEBI("etc");
+  let productoF = docGEBI("productoRelacionado");
+  let textoF = docGEBI("textoConsulta");
+  let promocionF = docGEBI("promocion");
+  let submitF = docGEBI("submitBtn");
+  let resetF = docGEBI("resetBtn");
+
+  log(event);
+  log("test" + nombreF.id + resetF.id);
+};
