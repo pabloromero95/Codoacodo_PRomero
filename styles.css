@@ -1,7 +1,10 @@
   *{
     font-size: 16px;
   }
-  
+  input:invalid{
+    outline: 2px solid red;
+    border-radius: 5px;
+  }
   :root{
     font-size: 16px;
     --color_style1: #4172f9;
@@ -94,7 +97,8 @@
 
   header {
     display: block;
-    position: sticky;
+    position: fixed;
+    z-index: 9999;
   }
 
 nav {
@@ -107,9 +111,12 @@ nav {
   background-color: var(--color_style1);
   border-bottom: 2px solid var(--color_font2);
   width: 100vw;
+  position: absolute;
+  
 }
 
 .topnav a {
+  position: relative;
   z-index: 100;
   float: left;
   display: block;
@@ -208,7 +215,7 @@ overflow-y: hidden;
   min-height: 400px;
   width: 90%;
   background-color: var(--color_style3);
-  margin: 5vh 2vw 0 2vw;
+  margin: 3vh 2vw;
   border: 3px solid var(--color_font1);
   border-radius: 1rem;
   box-shadow:  5px 5px 10px #23185a;
@@ -249,18 +256,76 @@ height: 15%;
   justify-self: center;
   align-self: center;
 }
-
+form{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 5vh;
+}
+fieldset{
+  background-color: var(--color_style3);
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+fieldset div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+fieldset label{
+  width: 100%;
+  margin-top: 0.5rem;
+}
+form input{
+  height: 1rem;
+}
+.espInput{
+  width: 10%;
+}
+.espLabel{
+width: 90%;
+margin-top: unset;
+}
+#provincia{
+  height: 2rem;
+}
+#promocion{
+  height: 1rem;
+  align-self: center;
+}
+.buttonsDiv{
+justify-content: space-evenly;
+align-items: center;
+}
+.formButtons{
+  margin: 0.6rem;
+  width: 30%;
+  height: auto;
+}
+legend{
+  background-color: var(--color_style3);
+  border: 0.2rem groove white;
+}
+#consulta input[type=text]{
+  max-height: 1rem;
+  margin-right: 50%;
+}
+#consulta textarea{
+margin-top: 1rem;
+width: 100%;
+}
 footer{
   display: grid;
   max-height: 200px;
   height: auto;
   margin-top: 10%;
   padding-left: 10px;
-  grid-template-rows: 2fr 6fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 3fr 2fr 1fr;
   grid-template-areas:
-              'nombre iconos mapa_sitio'
-              'infoNosotros Contacto mapa_sitio';
+              'nombre mapa_sitio1 mapa_sitio2';
   background-color: var(--color_style1);
   border-top: 2px solid black;
 }
@@ -277,8 +342,13 @@ footer .SM-icons{
 }
 .SM-icons .fa-brands{
   font-size: 1.5rem;
-  margin-left: 0.4rem;
+  margin: 0.4rem;
 }
+
+.fa-brands:hover {
+  color: white;
+}
+
 footer .siteInfo{
   grid-area:infoNosotros;
 }
@@ -296,18 +366,102 @@ footer .backUp{
 .fa-circle-up{
   font-size: 2rem;
 }
-footer .siteMap{
-  grid-area: mapa_sitio;
-  display: inline-flex;
+footer .siteMap1{
+  grid-area: mapa_sitio1;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.siteMap li {
-  width: 100%;
-  display: block;
-  align-self: auto;
-  justify-self: center;
 
+footer .siteMap2{
+  grid-area: mapa_sitio2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.siteMap1 li, .siteMap2 li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  margin-top: 2px;
+
+}
+
+#aboutUs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+}
+
+.aboutContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  padding: 10px;
+  margin: 1rem auto;
+  background-color: var(--color_style3);
+  border-radius: 20px;
+  border: 3px solid black;
+  box-shadow:  5px 5px 10px #23185a;
+}
+.aboutContainer h3 {
+  font-size: 1.4rem;
+}
+
+.frameContainer{
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+.gameList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  max-width: 500px;
+  height: 50%;
+  display: block;
+  padding: 10px;
+  margin: auto;
+  background-color: var(--color_style3);
+  border-radius: 20px;
+  border: 3px solid black;
+  box-shadow:  5px 5px 10px #23185a;
+}
+
+.gameList h3{
+background-color:var(--color_style1);
+border-radius: 10px;
+border: 3px solid black;
+}
+
+.gameTable {
+margin: auto;
+}
+
+.tableData {
+  height: 5vh;
+  border: 2px solid black;
+  border-radius: 0 10px;
+  background-color: var(--color_style1);
+  font-size: 0.9rem;
+}
+.tableRow th{
+  height: 5vh;
+  text-align: center;
+  font-size: 1rem;
 }
 
 
@@ -350,7 +504,6 @@ footer .siteMap{
     min-height: 400px;
     width: 90%;
     background-color: var(--color_style3);
-    margin: 5vh 2vw 0 2vw;
     border: 3px solid var(--color_font1);
     border-radius: 1rem;
     box-shadow:  5px 5px 10px #23185a;
@@ -409,10 +562,37 @@ footer .siteMap{
     grid-template-columns: 1fr 1fr;
   }
 
+  fieldset#datosPersonales{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                      'nombre_apellido genero'
+                      'email telefono'
+                      'provincia ciudad';
+    max-width: 575px;
+  }
+ 
+  .espInput{
+    width: 7%;
+    margin-right: 2%;
+    height: 1rem;
+  }
+  .productoRelacionado{
+    flex-direction: column;
+    gap:0.5rem;
+  }
+  .nombreDiv{
+    grid-area: nombre_apellido;
+  }
+  .generoDiv{
+    grid-area: genero;
+  }
   footer {
     font-size: 18px;
   }
 }
+
 @media screen and (min-width:1300px){
   .juegoContainer{
     max-width: 25rem;
@@ -438,7 +618,38 @@ footer .siteMap{
     grid-template-rows: 2fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
+fieldset{
+  width: 50vw;
+}
+  fieldset#datosPersonales{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                      'nombre_apellido genero'
+                      'email telefono'
+                      'provincia ciudad';
+    max-width: 575px;
+  }
+ 
+  .espInput{
+    width: 7%;
+    margin-right: 2%;
+    height: 1rem;
+  }
+  #emailContacto label{
+    height: 1rem;
+  }
+  .productoRelacionado{
+    flex-direction: column;
+    gap:0.5rem;
+  }
+  .nombreDiv{
+    grid-area: nombre_apellido;
+  }
+  .generoDiv{
+    grid-area: genero;
+  }
   footer {
     font-size: 18px;
   }
