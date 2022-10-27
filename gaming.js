@@ -356,12 +356,12 @@ const options = {
 let responseFiltered = [];
 
 
-fetch("https://game-prices.p.rapidapi.com/games?title=minecraft&region=us&offset=0&limit=49", options)
+/*fetch("https://game-prices.p.rapidapi.com/games?title=minecraft&region=us&offset=0&limit=49", options)
   .then((response) => response.json())
   .then(({ games }) => responseFiltered = games.filter((game) => game.type === 'game' && game.hasOwnProperty("currentLowestPrice")))
   .then(fillList)
   .catch((err) => console.error(err));
-
+*/
 function showResponseFiltered() {
   responseFiltered.map((element) => log("El precios más rentable es:", element.currentLowestPrice));
 };
@@ -456,26 +456,31 @@ function docGEBI(selector) { return doc.getElementById(selector); };
 docGEBI("formulario_article").addEventListener("submit", validateForm);
 // #submitBtn
 
-function validateForm(event) {
-  event.preventDefault();
-  let nombreF = docGEBI("nombre");
-  let hombreF = docGEBI("hombre");
-  let mujerF = docGEBI("mujer");
-  let otroF = docGEBI("otro");
-  let emailF = docGEBI("email");
-  let telefonoF = docGEBI("telefono");
-  let provinciaF = docGEBI("provincia");
-  let ciudadF = docGEBI("ciudad");
-  let juegosFF = docGEBI("juegos_Fisicos");
-  let juegosDF = docGEBI("juegos_Digitales");
-  let juegosMF = docGEBI("juegos_de_Mesa");
-  let otros = docGEBI("etc");
-  let productoF = docGEBI("productoRelacionado");
-  let textoF = docGEBI("textoConsulta");
-  let promocionF = docGEBI("promocion");
-  let submitF = docGEBI("submitBtn");
-  let resetF = docGEBI("resetBtn");
+// let target;
+// function validateForm({ target: { elements } }) {
+//   event.preventDefault();
+//   target = elements;
+//   let nombre = elements.nombre;
+//   let email = elements.email;
+//   let telefono = elements.telefono;
+//   let provincia = elements.provincia;
+//   let ciudad = elements.ciudad;
+//   let categoriasInputs = elements.categoria;
+//   let juegosDigital = elements.f_juegosDig;
+//   let juegosPS4 = elements.f_juegosPs4;
+//   let juegosXBOX = elements.f_juegosXbox;
+//   let accesorios = elements.f_accesorios;
+//   let otro = elements.f_otro;
+//   let productoNombre = elements.productoRelacionado;
+//   let consultaRedactada = elements.textoConsulta;
+//   let recibirPromociones = elements.promocion;
 
-  log(event);
-  log("test" + nombreF.id + resetF.id);
-};
+//   let errors = [];
+
+//   maxLength | localName | nodeName
+
+//   if (nombre.length > );
+//   // errors.push("¡ERROR EN LONGITUD DEL NOMBRE!");
+
+//   log(target);
+// };

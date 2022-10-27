@@ -424,23 +424,23 @@
   <h2 id="seccForm" class="gamesCategory">Contactanos!</h2>
 
   <section id="formularioContacto">
-    <form id="formulario_article" name="formularioConsulta">
+    <form id="formulario_article" name="formularioConsulta" method="post">
       <fieldset id="datosPersonales">
         <legend>Datos Personales</legend>
         <div id="nombreContacto">
           <label for="nombre">Nombre y Apellido: </label>
-          <input type="text" name="nombreCompleto" id="nombre" minlength="3" min="3" maxlength="30" max="30"
-            placeholder="Nombre Apellio" required>
+          <input pattern="([a-zA-Z ]){3,}" type="text" name="nombre" id="nombre" minlength="3" min="3" maxlength="30"
+            max="30" placeholder="Nombre Apellio" required>
         </div>
         <div id="emailContacto">
           <label for="email">Email: </label>
-          <input type="email" name="email" id="email" placeholder="youremail@default.com" minlength="3" min="3"
-            maxlength="30" max="30" required>
+          <input pattern="\w+@[\w]{2,}(\.[a-z]{2,})+" type="email" name="email" id="email"
+            placeholder="youremail@default.com" minlength="3" min="3" maxlength="30" max="30" required>
         </div>
         <div id="telefonoContacto">
           <label for="telefono">Telefono: </label>
-          <input type="tel" name="telefono" id="telefono" placeholder="11 1111-1111" minlength="6" min="6"
-            maxlength="11" max="11">
+          <input pattern="\d{2}\s{1}(\d{4}-?){2}" type="tel" name="telefono" id="telefono" placeholder="11 1111-1111"
+            minlength="7" min="7" maxlength="12" max="12">
 
         </div>
         <div id="provinciaContacto">
@@ -454,51 +454,52 @@
             <option>Córdoba </option>
             <option>Corrientes </option>
             <option>Entre Ríos </option>
-            <option>Formosa </option>
-            <option>Jujuy </option>
-            <option>La Pampa </option>
-            <option>La Rioja </option>
-            <option>Mendoza </option>
-            <option>Misiones </option>
-            <option>Neuquén </option>
-            <option>Río Negro </option>
-            <option>Salta </option>
-            <option>San Juan </option>
-            <option>San Luis </option>
-            <option>Santa Cruz </option>
-            <option>Santa Fe </option>
-            <option>Santiago del Estero </option>
+            <option>Formosa</option>
+            <option>Jujuy</option>
+            <option>La Pampa</option>
+            <option>La Rioja</option>
+            <option>Mendoza</option>
+            <option>Misiones</option>
+            <option>Neuquén</option>
+            <option>Río Negro</option>
+            <option>Salta</option>
+            <option>San Juan</option>
+            <option>San Luis</option>
+            <option>Santa Cruz</option>
+            <option>Santa Fe</option>
+            <option>Santiago del Estero</option>
             <option>Tierra del Fuego</option>
-            <option>Tucumán </option>
+            <option>Tucumán</option>
           </select>
         </div>
         <div id="ciudadContacto">
           <label for="ciudad">Ciudad: </label>
-          <input type="text" name="ciudad" id="ciudad" minlength="4" min="4" maxlength="30" max="30">
+          <input pattern="[a-zA-Z]+" type="text" name="ciudad" id="ciudad" minlength="4" min="4" maxlength="30"
+            max="30">
         </div>
       </fieldset>
-      <fieldset id="F_consulta">
+      <fieldset id="consulta">
         <legend>Consulta</legend>
         <div>
           <label for="Juegos Fisicos">Categoría de consulta:</label>
-          <input type="checkbox" name="categoría" id="f_juegosDig" value="Juegos Digitales" class="espInput">
+          <input type="checkbox" name="categoria" id="f_juegosDig" value="Juegos Digitales" class="espInput">
           <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label>
-          <input type="checkbox" name="categoría" id="f_juegosPs4" value="Juegos Ps4" class="espInput">
+          <input type="checkbox" name="categoria" id="f_juegosPs4" value="Juegos Ps4" class="espInput">
           <label for="Juegos Ps4" class="espLabel">Juegos PS4</label>
-          <input type="checkbox" name="categoría" id="f_juegosXbox" value="Juegos XBox" class="espInput">
+          <input type="checkbox" name="categoria" id="f_juegosXbox" value="Juegos XBox" class="espInput">
           <label for="Juegos XBox" class="espLabel">Juegos XBox</label>
-          <input type="checkbox" name="categoría" id="f_accesorios" value="Accesorios" class="espInput">
+          <input type="checkbox" name="categoria" id="f_accesorios" value="Accesorios" class="espInput">
           <label for="Accesorios" class="espLabel">Accesorios</label>
-          <input type="checkbox" name="categoría" id="f_otro" value="Etc" class="espInput">
+          <input type="checkbox" name="categoria" id="f_otro" value="Otro" class="espInput">
           <label for="otro" class="espLabel"> Otro</label>
         </div>
         <div class="productoRelacionado">
           <label for="productoRelacionado"> Producto Relacionado: </label>
-          <input type="text" name="productoRelacionado" id="productoRelacionado">
+          <input pattern="\w+" type="text" name="productoRelacionado" id="productoRelacionado">
         </div>
         <div class="divConsulta">
           <label for="consulta">Consulta:</label>
-          <textarea name="consulta" id="textoConsulta" cols="50" rows="10" minlength="50" maxlength="600"
+          <textarea pattern="\w+" name="consulta" id="textoConsulta" cols="50" rows="10" minlength="50" maxlength="600"
             placeholder="Escribe tu consulta aquí..." required></textarea>
         </div>
       </fieldset>
