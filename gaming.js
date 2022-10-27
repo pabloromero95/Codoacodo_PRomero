@@ -451,36 +451,48 @@ juego2.resumenJuego();
 
 
 const doc = document;
+function docQSA(selector) { return doc.querySelectorAll(selector) };
+function docQS(selector) { return doc.querySelector(selector) };
 function docGEBI(selector) { return doc.getElementById(selector); };
 
 docGEBI("formulario_article").addEventListener("submit", validateForm);
-// #submitBtn
 
-// let target;
-// function validateForm({ target: { elements } }) {
-//   event.preventDefault();
-//   target = elements;
-//   let nombre = elements.nombre;
-//   let email = elements.email;
-//   let telefono = elements.telefono;
-//   let provincia = elements.provincia;
-//   let ciudad = elements.ciudad;
-//   let categoriasInputs = elements.categoria;
-//   let juegosDigital = elements.f_juegosDig;
-//   let juegosPS4 = elements.f_juegosPs4;
-//   let juegosXBOX = elements.f_juegosXbox;
-//   let accesorios = elements.f_accesorios;
-//   let otro = elements.f_otro;
-//   let productoNombre = elements.productoRelacionado;
-//   let consultaRedactada = elements.textoConsulta;
-//   let recibirPromociones = elements.promocion;
+let InputsTextRestrictions = [];
+docQSA(
+  `#formulario_article input[type="text"],
+  #formulario_article input[type="email"],
+  #formulario_article input[type="tel"],
+  #formulario_article input[type="textarea"]`
+).forEach((input, index) => {
+  InputsTextRestrictions.push({
+    input, //<=shorthand mention, equal key and value variable...
+    max: input.maxLength,
+    min: input.minLength,
+    pattern: input.pattern
+  });
+  log(InputsTextRestrictions[index]);
+  // input.addEventListener('input', ({ target: { value } }) => log(value));
+});
 
-//   let errors = [];
+function validateForm({ target: { elements } }) {
+  event.preventDefault();
 
-//   maxLength | localName | nodeName
+  let categorias = elements.categoria;
+  let categoriasSinMarcadas = true;
+  let recibirPromociones = elements.promocion.checked;
 
-//   if (nombre.length > );
-//   // errors.push("¡ERROR EN LONGITUD DEL NOMBRE!");
+  for (i = 0; i < categorias.length; i++)
+    if (categoria[i].checked === true) {
+      categoriasSinMarcadas = false; break;
+    };
 
-//   log(target);
-// };
+  let errors = InputsTextRestrictions.some((
+    { input: { value }, min, max, pattern }) =>
+    (value.length < min && value.length > max) || !value.includes(pattern)
+  ) || categoriasSinMarcadas;
+
+  if (errors)
+    alert("¡REVISA bien los DATOS INGRESADOS!\n¡ERROR DE DATOS INGRESADOS!");
+  else
+    alert("¡ENVIO TEORICO DE DATOS ENVIADO CON EXITO!");
+};
