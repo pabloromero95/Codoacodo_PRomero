@@ -37,9 +37,9 @@
           <a href="#accesorios">Accesorios</a>
         </div>
       </div>
-      <a href="#news">Noticias</a>
+      <a href="#cotizacion">Cotización</a>
       <a href="#aboutUs">Sobre nosotros</a>
-      <a href="#seccForm">Contacto</a>
+      <a href="#contacto">Contacto</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </nav>
   </header>
@@ -421,134 +421,38 @@
     </article>
   </section>
 
-  <h2 id="seccForm" class="gamesCategory">Contactanos!</h2>
+  <h2  class="gamesCategory">Cotización</h2>
 
-  <section id="formularioContacto">
-    <form id="formulario_article" name="formularioConsulta" method="post">
-      <fieldset id="datosPersonales">
-        <legend>Datos Personales</legend>
-        <div id="nombreContacto">
-          <label for="nombre">Nombre y Apellido: </label>
-          <input pattern="([a-zA-Z ]){3,}" type="text" name="nombre" id="nombre" minlength="3" min="3" maxlength="30"
-            max="30" placeholder="Nombre Apellio" required>
-        </div>
-        <div id="emailContacto">
-          <label for="email">Email: </label>
-          <input pattern="\w+@[\w]{2,}(\.[a-z]{2,})+" type="email" name="email" id="email"
-            placeholder="youremail@default.com" minlength="3" min="3" maxlength="30" max="30" required>
-        </div>
-        <div id="telefonoContacto">
-          <label for="telefono">Telefono: </label>
-          <input pattern="\d{2}\s{1}(\d{4}-?){2}" type="tel" name="telefono" id="telefono" placeholder="11 1111-1111"
-            minlength="7" min="7" maxlength="12" max="12">
-
-        </div>
-        <div id="provinciaContacto">
-          <label for="provincia">Provincia: </label>
-          <select name="provincia" id="provincia">
-            <option>Buenos Aires</option>
-            <option>Ciudad Autónoma de Buenos Aires</option>
-            <option>Catamarca</option>
-            <option>Chaco</option>
-            <option>Chubut</option>
-            <option>Córdoba</option>
-            <option>Corrientes</option>
-            <option>Entre Ríos</option>
-            <option>Formosa</option>
-            <option>Jujuy</option>
-            <option>La Pampa</option>
-            <option>La Rioja</option>
-            <option>Mendoza</option>
-            <option>Misiones</option>
-            <option>Neuquén</option>
-            <option>Río Negro</option>
-            <option>Salta</option>
-            <option>San Juan</option>
-            <option>San Luis</option>
-            <option>Santa Cruz</option>
-            <option>Santa Fe</option>
-            <option>Santiago del Estero</option>
-            <option>Tierra del Fuego</option>
-            <option>Tucumán</option>
-          </select>
-        </div>
-        <div id="ciudadContacto">
-          <label for="ciudad">Ciudad: </label>
-          <input pattern="[a-zA-Z]+" type="text" name="ciudad" id="ciudad" minlength="4" min="4" maxlength="30"
-            max="30">
-        </div>
-      </fieldset>
-      <fieldset id="consulta">
-        <legend>Consulta</legend>
-        <div>
-          <label for="Juegos Fisicos">Categoría de consulta:</label>
-          <input type="checkbox" name="categoria" id="f_juegosDig" value="Juegos Digitales" class="espInput">
-          <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label>
-          <input type="checkbox" name="categoria" id="f_juegosPs4" value="Juegos Ps4" class="espInput">
-          <label for="Juegos Ps4" class="espLabel">Juegos PS4</label>
-          <input type="checkbox" name="categoria" id="f_juegosXbox" value="Juegos XBox" class="espInput">
-          <label for="Juegos XBox" class="espLabel">Juegos XBox</label>
-          <input type="checkbox" name="categoria" id="f_accesorios" value="Accesorios" class="espInput">
-          <label for="Accesorios" class="espLabel">Accesorios</label>
-          <input type="checkbox" name="categoria" id="f_otro" value="Otro" class="espInput">
-          <label for="otro" class="espLabel"> Otro</label>
-        </div>
-        <div class="productoRelacionado">
-          <label for="productoRelacionado"> Producto Relacionado: </label>
-          <input pattern="\w+" type="text" name="productoRelacionado" id="productoRelacionado">
-        </div>
-        <div class="divConsulta">
-          <label for="consulta">Consulta:</label>
-          <textarea pattern="\w+" name="consulta" id="textoConsulta" cols="50" rows="10" minlength="50" maxlength="600"
-            placeholder="Escribe tu consulta aquí..." required></textarea>
-        </div>
-      </fieldset>
-      <fieldset id="postConsulta">
-        <div>
-          <input type="checkbox" name="promocion" id="promocion" class="espInput">
-          <label for="promocion" class="espLabel">Quiero Recibir Contenido Promocional</label>
-        </div>
-        <div class="buttonsDiv">
-          <input type="submit" value="Enviar" class="formButtons" id="submitBtn">
-          <input type="reset" value="Resetear" class="formButtons" id="resetBtn">
-        </div>
-      </fieldset>
-    </form>
-  </section>
-
-  <section id="aboutUs">
-    <article class="gameList">
-      <h3>Top 4 Minecraft Editions</h3>
+  <section id="cotizacion">
+    <article id="cotizacionTabla">
+      <h3>Tomamos divisas</h3>
       <div class="list">
-        <table class="gameTable">
+        <table class="cotTable">
           <thead>
-            <tr class="tableRow head">
-              <th>Nombre del juego</th>
-              <th>Mejor precio</th>
+            <tr class="tableHead">
+              <th class="tableRow head">Divisa</th>
+              <th class="tableRow head">Cotizacion</th>
             </tr>
           </thead>
           <tbody>
             <tr class="tableRow">
-              <td class="tableData tableName"></td>
+              <td class="tableData tableName">Dólar</td>
               <td class="tableData tableLow"></td>
             </tr>
             <tr class="tableRow">
-              <td class="tableData tableName"></td>
-              <td class="tableData tableLow"></td>
-            </tr>
-            <tr class="tableRow">
-              <td class="tableData tableName"></td>
-              <td class="tableData tableLow"></td>
-            </tr>
-            <tr class="tableRow">
-              <td class="tableData tableName"></td>
+              <td class="tableData tableName">Euro</td>
               <td class="tableData tableLow"></td>
             </tr>
           </tbody>
         </table>
       </div>
     </article>
+  </section>
 
+
+  <h2 class="gamesCategory">¿Quienes somos?</h2>
+
+  <section id="aboutUs">
     <article class="aboutContainer">
       <div>
         <div class="aboutText">
@@ -582,6 +486,70 @@
     </article>
   </section>
 
+  <h2 id="contacto" class="gamesCategory">Contactanos!</h2>
+
+  <section id="formularioContacto" class="container">
+    <form>
+      <i class="fa-regular fa-envelope"></i>
+
+      <div class="input-group">
+        <label>Nombre Completo</label>
+        <input type="text" placeholder="Ingrese su nombre" id="contactName" onkeyup="validateName()">
+        <div id="nombre-error" class="err"></div>
+      </div>
+
+      <div class="input-group">
+        <label>Telefono</label>
+        <input type="tel" placeholder="11 2222 3333" id="contactTel" onkeyup="validateTel()">
+        <div id="tel-error" class="err"></div>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Ingrese su Email" id="contactEmail" onkeyup="validateEmail()">
+        <div id="email-error" class="err"></div>
+      </div>   
+
+      <div id="check-group" onclick="validateCheckGroup()">
+        <label for="Juegos Fisicos">Categoría de consulta:</label><br>
+        <input type="checkbox" name="categoria" id="f_juegosDig" value="checked" class="espInput">
+        <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label><br>
+        <input type="checkbox" name="categoria" id="f_juegosPs4" value="checked" class="espInput">
+        <label for="Juegos Ps4" class="espLabel">Juegos PS4</label><br>
+        <input type="checkbox" name="categoria" id="f_juegosXbox" value="checked" class="espInput">
+        <label for="Juegos XBox" class="espLabel">Juegos XBox</label><br>
+        <input type="checkbox" name="categoria" id="f_accesorios" value="checked" class="espInput">
+        <label for="Accesorios" class="espLabel">Accesorios</label><br>
+        <input type="checkbox" name="categoria" id="f_otro" value="checked" class="espInput">
+        <label for="otro" class="espLabel"> Otro</label>
+        <div id="checkgroup-error" class="err"></div>
+      </div>
+
+      <div class="input-group">
+        <label>Producto</label>
+        <input type="text" placeholder="Producto por el que consulta" id="contactProduct" onkeyup="validateProduct()">
+        <div id="product-error" class="err"></div>
+      </div>
+
+      <div class="input-group">
+        <label>Su Mensaje</label>
+        <textarea rows="5" placeholder="Ingrese su mensaje" id="contactMsg" onkeyup="validateMsg()"></textarea>
+        <div id="msg-error" class="err"></div>
+      </div>
+
+      <div>
+        <input type="checkbox" name="categoria" id="suscribe" value="suscribe" class="espInput">
+        <label for="otro" class="espLabel"> Informenme sobre ofertas!</label>
+      </div>
+
+    <button onclick="return validate()">Submit</button>
+    <div id="submit-error" class="err"></div>
+  </section>
+
+
+
+
+
   <footer>
 
     <div class="siteTitle">
@@ -591,16 +559,15 @@
     </div>
     <ul class="siteMap1">
       <li class="map-item"><a href="#home">Home</a></li>
-      <li class="map-item"><a href="#news">Noticias</a></li>
+      <li class="map-item"><a href="#cotizacion">Cotizacion</a></li>
       <li class="map-item"><a href="#aboutUs">Sobre nosotros</a></li>
+      <li class="map-item"><a href="#contact">Contacto</a></li>
     </ul>
     <ul class="siteMap2">
-      <li class="map-item">
-        <a href="#juegosDigitales">Juegos Digitales</a>
-      </li>
-      <br />
+      <li class="map-item"><a href="#juegosDigitales">Juegos Digitales</a></li>
       <li class="map-item"><a href="#juegosPs4">Juegos PS</a></li>
       <li class="map-item"><a href="#juegosXBox">Juegos Xbox</a></li>
+      <li class="map-item"><a href="#accesorios">Accesorios</a></li>
     </ul>
   </footer>
 

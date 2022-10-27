@@ -192,6 +192,9 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+/* Fin del Styles del nav*/
+
+/* Styles de las cajas de productos*/
 
   .articleContainer {
     display: flex;
@@ -272,112 +275,183 @@
     align-self: center;
   }
 
-  #formularioContacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+/* Fin de las cajas de productos*/
 
-  #formulario_article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vh;
-    width: 35vw;
-    background-color: var(--color_style3);
-    padding: 2rem;
-    margin: auto;
-  }
+/* Styles del form*/
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container form{
+  width: 90%;
+  max-width: 500px;
+  padding: 50px 30px 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.fa-regular{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  font-size: 36px;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+  position: relative;
+}
+.input-group div{
+position: relative;
+bottom: 12px;
+right: 17px;
+font-size: 14px;
+color:red;
+margin: 15px auto 0;
+}
+#submit-error {
+color:red;
+}
+
+.input-group label{
+  flex-basis: 28%;
+}
+.input-group input, .input-group textarea{
+  flex-basis: 68%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+  color: #333;
+  font-size: 16px;
+}
+::placeholder{
+  font-size: 0.9rem;
+}
+
+form button{
+  background: #141a34;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 10px 40px;
+  outline: 0;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 10px;
+}
+
+#check-group{
+  display: block;
+  margin: 0 30%;
+}
+
+  /* Fin del form*/
+
+/* Style de la seccion About Us*/
+#aboutUs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  padding: 10px;
+  margin: 1rem auto;
+  background-color: var(--color_style3);
+  border-radius: 20px;
+  border: 3px solid black;
+  box-shadow: 5px 5px 10px #23185a;
+}
+
+.aboutText h3{
+  font-size: 1.7rem;
+}
+
+.frameContainer {
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+/* Fin de seccion About us*/
 
 
-  #formulario_article input:required {
-    outline: 0.2rem solid transparent;
-    border: 0.2rem solid transparent;
-  }
+/*  Styles de fetched API */
 
-  #formulario_article input:empty {
-    outline: 0.2rem solid transparent;
-    border: 0.2rem solid transparent;
-  }
+#cotizacionTabla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  min-width: 350px;
+  max-width: 500px;
+  height: 50%;
+  display: block;
+  padding: 10px;
+  margin: 3vh auto 10vh auto;
+  background-color: var(--color_style3);
+  border-radius: 20px;
+  border: 3px solid black;
+  box-shadow: 5px 5px 10px #23185a;
+}
 
-  #formulario_article input:invalid {
-    outline: 0.1rem solid #f00;
-    border: 0.1rem solid #f00;
-  }
+.cotizacion h3 {
+  background-color: var(--color_style1);
+  border-radius: 10px;
+  border: 3px solid black;
+  font-size: 2rem;
+}
 
-  #formulario_article input:valid {
-    outline: 0.1rem solid #0f0;
-    border: 0.1rem solid #0f0;
-  }
+.cotTable {
+  margin: auto;
+}
 
-  fieldset {
-    background-color: var(--color_style1);
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-    color: white;
-  }
+.tableData {
+  height: 5vh;
+  border: 2px solid black;
+  border-radius: 0 10px;
+  background-color: var(--color_style1);
+  font-size: 1.8rem;
+  width:auto;
+}
 
-  fieldset div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.tableRow head {
+  height: 5vh;
+  text-align: center;
+  font-size: 2rem;
+}
 
-  fieldset label {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
+ /* Fin de estilos de API*/
 
-  form input {
-    height: 1rem;
-  }
-
-  .espInput {
-    width: 10%;
-  }
-
-  .espLabel {
-    width: 90%;
-    margin-top: unset;
-  }
-
-  #provincia {
-    height: 2rem;
-  }
-
-  #promocion {
-    height: 1rem;
-    align-self: center;
-  }
-
-  .buttonsDiv {
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .formButtons {
-    margin: 0.6rem;
-    width: 30%;
-    height: auto;
-  }
-
-  legend {
-    background-color: var(--color_style3);
-    border: 0.2rem groove white;
-  }
-
-  #consulta input[type=text] {
-    max-height: 1rem;
-    margin-right: 50%;
-  }
-
-  #consulta textarea {
-    margin-top: 1rem;
-    width: 100%;
-  }
+  /* Styles del footer*/
 
   footer {
     display: grid;
@@ -386,23 +460,18 @@
     margin-top: 10%;
     padding-left: 10px;
     grid-template-rows: 1fr;
-    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
     grid-template-areas:
       'nombre mapa_sitio1 mapa_sitio2';
     background-color: var(--color_style1);
     border-top: 2px solid black;
+    color:white;
   }
 
   footer .siteTitle {
     grid-area: nombre;
     align-self: center;
     margin-left: 0.4rem;
-  }
-
-  footer .SM-icons {
-    grid-area: iconos;
-    align-self: center;
-    justify-self: center;
   }
 
   .SM-icons .fa-brands {
@@ -414,26 +483,6 @@
     color: white;
   }
 
-  footer .siteInfo {
-    grid-area: infoNosotros;
-  }
-
-  footer .contactInfo {
-    grid-area: Contacto;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  footer .backUp {
-    grid-area: up;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .fa-circle-up {
-    font-size: 2rem;
-  }
 
   footer .siteMap1 {
     grid-area: mapa_sitio1;
@@ -460,82 +509,17 @@
 
   }
 
-  #aboutUs {
+  .siteMap1 li>a,
+  .siteMap2 li>a{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;
-    width: 90%;
+    text-align: start;
+    color:white;
   }
+  /* Fin del footer*/
 
-  .aboutContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 400px;
-    height: auto;
-    display: block;
-    padding: 10px;
-    margin: 1rem auto;
-    background-color: var(--color_style3);
-    border-radius: 20px;
-    border: 3px solid black;
-    box-shadow: 5px 5px 10px #23185a;
-  }
+  
 
-  .aboutContainer h3 {
-    font-size: 1.4rem;
-  }
-
-  .frameContainer {
-    width: 100%;
-    height: auto;
-    margin: 1rem auto;
-  }
-
-  .gameList {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    max-width: 500px;
-    height: 50%;
-    display: block;
-    padding: 10px;
-    margin: auto;
-    background-color: var(--color_style3);
-    border-radius: 20px;
-    border: 3px solid black;
-    box-shadow: 5px 5px 10px #23185a;
-  }
-
-  .gameList h3 {
-    background-color: var(--color_style1);
-    border-radius: 10px;
-    border: 3px solid black;
-  }
-
-  .gameTable {
-    margin: auto;
-  }
-
-  .tableData {
-    height: 5vh;
-    border: 2px solid black;
-    border-radius: 0 10px;
-    background-color: var(--color_style1);
-    font-size: 0.9rem;
-  }
-
-  .tableRow th {
-    height: 5vh;
-    text-align: center;
-    font-size: 1rem;
-  }
-
+  /* Configuraciones para mobile*/
 
   @media screen and (max-width: 600px) {
 
@@ -626,6 +610,10 @@
     }
   }
 
+  /* Fin de config mobile*/
+
+  /* Configuraciones para tablet*/
+
   @media screen and (min-width: 600px) and (max-width: 1300px) {
 
     /* Tablet Code*/
@@ -689,7 +677,15 @@
     }
   }
 
+  /* Fin de configuraciones para tablet*/
+
+  /* Configuraciones para desktop*/
+
   @media screen and (min-width:1300px) {
+    *{
+      font-size: 1rem;
+    }
+    
     .juegoContainer {
       max-width: 25rem;
       height: 40vh;
@@ -757,4 +753,14 @@
     footer {
       font-size: 18px;
     }
+
+    #cotizacionTabla{
+      margin:auto;
+      max-width: 400px;
+    }
+    #cotizacionTabla h3{
+      font-size: 1.5rem;
+    }
   }
+
+  /* Fin de configuraciones para desktop*/
