@@ -297,17 +297,17 @@
     border: 0.2rem solid transparent;
   }
 
-  #formulario_article input:empty {
+  #formulario_article input.empty {
     outline: 0.2rem solid transparent;
     border: 0.2rem solid transparent;
   }
 
-  #formulario_article input:invalid {
+  #formulario_article input.invalid {
     outline: 0.1rem solid #f00;
     border: 0.1rem solid #f00;
   }
 
-  #formulario_article input:valid {
+  #formulario_article input.valid {
     outline: 0.1rem solid #0f0;
     border: 0.1rem solid #0f0;
   }

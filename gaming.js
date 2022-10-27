@@ -496,3 +496,23 @@ function validateForm({ target: { elements } }) {
   else
     alert("¡ENVIO TEORICO DE DATOS ENVIADO CON EXITO!");
 };
+
+let formNombre = getElementById("nombre");
+console.log(formNombre.textContent)
+
+function validarNombre(){
+  if (formNombre.value.length == ""){
+    formNombre.classList.add(" empty")
+  }
+  else if (formNombre.value.length < 3) {
+    formNombre.classList.add(" invalid")
+  }
+  else if (formNombre.value.length >= 3 && formNombre.value.length < 30) {
+    formNombre.classList.add(" valid")
+}
+console.log(formNombre.value)
+}
+
+formNombre.addEventListener("input", validarNombre())
+
+
