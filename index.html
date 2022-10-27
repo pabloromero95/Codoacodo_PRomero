@@ -1,632 +1,610 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaming4All - Home</title>
-    <link rel="stylesheet" href="assets/normalize.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/88429e7dc0.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Petrona:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      const log = (...msg) => console.log(...msg);
-    </script>
-  </head>
-  <body>
-    <header>
-      <nav class="topnav" id="myTopnav">
-        <a href="#home" class="active" id="navBar">Gaming4All</a>
-        <!--Le cambié el nombre al ID.-->
-        <div class="dropdown">
-          <button class="dropbtn">
-            Juegos
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#juegosDigitales">Digitales</a>
-            <a href="#juegosXBox">Xbox</a>
-            <a href="#juegosPs4">PS4</a>
-            <a href="#accesorios">Accesorios</a>
-          </div>
-        </div>
-        <a href="#news">Noticias</a>
-        <a href="#aboutUs">Sobre nosotros</a>
-        <a href="#contact">Contacto</a>
-        <a
-          href="javascript:void(0);"
-          style="font-size: 15px"
-          class="icon"
-          onclick="myFunction()"
-          >&#9776;</a
-        >
-      </nav>
-    </header>
 
-    <br />
-    <span id="home"></span>
-    <div class="carousel">
-      <div class="carousel__item carousel__item--visible">
-        <img src="assets/carr/D-NA.jpg" />
-      </div>
-      <div class="carousel__item">
-        <img src="assets/carr/D-CP2077.jpg" />
-      </div>
-      <div class="carousel__item">
-        <img src="assets/carr/D-NMS.jpg" />
-      </div>
-      <div class="carousel__item">
-        <img src="assets/carr/D-FO4.jpg" />
-      </div>
-      <div class="carousel__item">
-        <img src="assets/carr/D-FC6.jpg" />
-      </div>
-      <div class="carousel__actions">
-        <button id="carousel__button--prev" aria-label="Previous slide">
-          <
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming4All - Home</title>
+  <link rel="stylesheet" href="assets/normalize.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/88429e7dc0.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Petrona:wght@500&display=swap"
+    rel="stylesheet" />
+  <script>
+    const log = (...msg) => console.log(...msg);
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="topnav" id="myTopnav">
+      <a href="#home" class="active" id="navBar">Gaming4All</a>
+      <!--Le cambié el nombre al ID.-->
+      <div class="dropdown">
+        <button class="dropbtn">
+          Juegos
+          <i class="fa fa-caret-down"></i>
         </button>
-        <button id="carousel__button--next" aria-label="Next slide">></button>
+        <div class="dropdown-content">
+          <a href="#juegosDigitales">Digitales</a>
+          <a href="#juegosXBox">Xbox</a>
+          <a href="#juegosPs4">PS4</a>
+          <a href="#accesorios">Accesorios</a>
+        </div>
       </div>
+      <a href="#news">Noticias</a>
+      <a href="#aboutUs">Sobre nosotros</a>
+      <a href="#seccForm">Contacto</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </nav>
+  </header>
+
+  <br />
+  <span id="home"></span>
+  <div class="carousel">
+    <div class="carousel__item carousel__item--visible">
+      <img src="assets/carr/D-NA.jpg" />
     </div>
+    <div class="carousel__item">
+      <img src="assets/carr/D-CP2077.jpg" />
+    </div>
+    <div class="carousel__item">
+      <img src="assets/carr/D-NMS.jpg" />
+    </div>
+    <div class="carousel__item">
+      <img src="assets/carr/D-FO4.jpg" />
+    </div>
+    <div class="carousel__item">
+      <img src="assets/carr/D-FC6.jpg" />
+    </div>
+    <div class="carousel__actions">
+      <button id="carousel__button--prev" aria-label="Previous slide">
+        < </button>
+          <button id="carousel__button--next" aria-label="Next slide">></button>
+    </div>
+  </div>
 
-    <br />
+  <br />
 
-    <p id="juegosDigitales" class="gamesCategory">Juegos Digitales</p>
 
-    <section class="articleContainer">
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
+  <h2 id="juegosDigitales" class="gamesCategory">Juegos Digitales</h2>
+
+  <section class="articleContainer">
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
       </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+  </section>
 
-      <br>
-
-      <h2 id="juegosDigitales" class="gamesCategory">Juegos Digitales</h2>
-      
-    <section class="articleContainer">
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-    </section>
-
-    <br />
-
-
-    <h2 id="juegosPs4" class="gamesCategory">Juegos PS4</h2>
-
-
-    <section class="articleContainer">
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-    </section>
-
-    <br />
+  <br />
 
 
-    <h2 id="juegosXBox" class="gamesCategory">Juegos XBox</h2>
- 
-    <section class="articleContainer">
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-    </section>
+  <h2 id="juegosPs4" class="gamesCategory">Juegos PS4</h2>
 
-    <br />
 
-    <h2 id="accesorios" class="gamesCategory">Accesorios</h2>
-  
-    <section class="articleContainer">
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-      <article class="juegoContainer j-item">
-        <h3 class="juegoTitulo j-item"></h3>
-        <img class="juegoImg j-item" src="" alt="portada del juego" />
-        <div class="juegoDescripcion j-item">
-          <p></p>
-        </div>
-        <div class="juegoPrecio j-item">
-          <span class="precioT"> Precio: $</span>
-        </div>
-      </article>
-    </section>
+  <section class="articleContainer">
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+  </section>
 
-    <h2 id="seccForm" class="gamesCategory">Contactanos!</h2>
+  <br />
 
-    <section id="formularioContacto">
-        <form name="formularioConsulta" action="/gaming.js" method="post" onsubmit="return validateForm()">
-            <fieldset id="datosPersonales">
-                <legend>Datos Personales</legend>
-                    <div id="nombreContacto">
-                        <label for="nombre">Nombre y Apellido: </label>
-                            <input type="text" name="nombreCompleto" id="nombre" required pattern="\w[\d]">
-                    </div>
-                    <div id="generoContacto">
-                        <label>Genero: </label>
-                        <input type="radio" name="genero" id="hombre" value="Hombre" class="espInput">
-                        <label for="hombre" class="espLabel">Masculino </label>
-                        <input type="radio" name="genero" id="mujer" value="Mujer" class="espInput">
-                        <label for="mujer" class="espLabel">Femenino</label>
-                        <input type="radio" name="genero" id="otro" value="Otro" class="espInput">
-                        <label for="otro" class="espLabel"> Otro</label>
-                    </div>
-                <div id="emailContacto">
-                    <label for="email">Email: </label>
-                        <input type="email" name="email" id="email" placeholder="youremail@default.com" required>
-                </div>
-                <div id="telefonoContacto">    
-                        <label for="telefono">Telefono: </label>
-                        <input type="tel" name="telefono" id="telefono" placeholder="+54 011 1111-1111">
-                    
-                </div>
-                <div id="provinciaContacto">
-                    <label for="provincia">Provincia: </label>
-                        <select name="provincia" id="provincia">
-                            <option> Buenos Aires </option>
-                            <option> Ciudad Autónoma de Buenos Aires </option>
-                            <option> Catamarca </option>
-                            <option> Chaco </option>
-                            <option> Chubut </option>
-                            <option> Córdoba </option>
-                            <option> Corrientes </option>
-                            <option> Entre Ríos </option>
-                            <option> Formosa </option>
-                            <option> Jujuy </option>
-                            <option> La Pampa </option>
-                            <option> La Rioja </option>
-                            <option> Mendoza </option>
-                            <option> Misiones </option>
-                            <option> Neuquén </option>
-                            <option> Río Negro </option>
-                            <option> Salta </option>
-                            <option> San Juan </option>
-                            <option> San Luis </option>
-                            <option> Santa Cruz </option>
-                            <option> Santa Fe </option>
-                            <option> Santiago del Estero </option>
-                            <option> Tierra del Fuego</option>
-                            <option> Tucumán </option>
-                        </select>
-                </div>
-                <div id="ciudadContacto">
-                    <label for="ciudad">Ciudad: </label>
-                        <input type="text" name="ciudad" id="ciudad">
-                </div>
-            </fieldset>
-            <fieldset id="consulta">
-                <legend>Consulta</legend>
-                <div>
-                    <label for="Juegos Fisicos">Categoría de consulta:</label>
-                        <input type="checkbox" name="categoría" id="juegos_Fisicos" value="Juegos Fisicos" class="espInput">
-                        <label for="Juegos Fisicos" class="espLabel">Juegos Fisicos</label>
-                        <input type="checkbox" name="categoría" id="juegos_Digitales" value="Juegos Digitales" class="espInput">
-                        <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label>
-                        <input type="checkbox" name="categoría" id="juegos_de_Mesa" value="Juegos de Mesa" class="espInput">
-                        <label for="Juegos de Mesa" class="espLabel">Juegos de Mesa</label>
-                        <input type="checkbox" name="categoría" id="etc" value="Etc" class="espInput">
-                        <label for="Etc" class="espLabel"> Etc.</label>      
-                </div>
-                <div class="productoRelacionado">              
-                    <label for="productoRelacionado"> Producto Relacionado: </label>
-                        <input type="text" name="productoRelacionado" id="productoRelacionado">
-                </div>
-                <div class="divConsulta">
-                    <label for="consulta">Consulta:</label>
-                    <textarea name="consulta" id="textoConsulta" cols="50" rows="10" minlength="10" maxlength="250" placeholder="Escribe tu consulta aquí..." required></textarea>
-                </div>
-            </fieldset>
-            <fieldset id="postConsulta">
-                <div>
-                    <input type="checkbox" name="promocion" id="promocion" class="espInput">
-                    <label for="promocion" class="espLabel">Quiero Recibir Contenido Promocional</label>
-                </div>
-                <div class="buttonsDiv">
-                    <input type="submit" value="Enviar" class="formButtons" id="submitBtn">
-                    <input type="reset" value="Resetear" class="formButtons" id="resetBtn">
-                </div>
-            </fieldset>
-        </form>
-    <section id="aboutUs">
-      <article class="gameList">
-        <h3>Top 4 Minecraft Editions</h3>
-        <div class="list">
-            <table class="gameTable">
-                <thead>
-                  <tr class="tableRow head">
-                    <th>Nombre del juego</th>
-                    <th>Mejor precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="tableRow">
-                    <td class="tableData tableName"></td>
-                    <td class="tableData tableLow"></td>
-                  </tr>
-                  <tr class="tableRow">
-                    <td class="tableData tableName"></td>
-                    <td class="tableData tableLow"></td>
-                  </tr>
-                  <tr class="tableRow">
-                    <td class="tableData tableName"></td>
-                    <td class="tableData tableLow"></td>
-                  </tr>
-                  <tr class="tableRow">
-                    <td class="tableData tableName"></td>
-                    <td class="tableData tableLow"></td>
-                  </tr>
-                </tbody>
-                </table>
+
+  <h2 id="juegosXBox" class="gamesCategory">Juegos XBox</h2>
+
+  <section class="articleContainer">
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p class="textDesc"></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+  </section>
+
+  <br />
+
+  <h2 id="accesorios" class="gamesCategory">Accesorios</h2>
+
+  <section class="articleContainer">
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+    <article class="juegoContainer j-item">
+      <h3 class="juegoTitulo j-item"></h3>
+      <img class="juegoImg j-item" src="" alt="portada del juego" />
+      <div class="juegoDescripcion j-item">
+        <p></p>
+      </div>
+      <div class="juegoPrecio j-item">
+        <span class="precioT"> Precio: $</span>
+      </div>
+    </article>
+  </section>
+
+  <h2 id="seccForm" class="gamesCategory">Contactanos!</h2>
+
+  <section id="formularioContacto">
+    <form id="formulario_article" name="formularioConsulta" method="post">
+      <fieldset id="datosPersonales">
+        <legend>Datos Personales</legend>
+        <div id="nombreContacto">
+          <label for="nombre">Nombre y Apellido: </label>
+          <input pattern="([a-zA-Z ]){3,}" type="text" name="nombre" id="nombre" minlength="3" min="3" maxlength="30"
+            max="30" placeholder="Nombre Apellio" required>
         </div>
-      </article>
+        <div id="emailContacto">
+          <label for="email">Email: </label>
+          <input pattern="\w+@[\w]{2,}(\.[a-z]{2,})+" type="email" name="email" id="email"
+            placeholder="youremail@default.com" minlength="3" min="3" maxlength="30" max="30" required>
+        </div>
+        <div id="telefonoContacto">
+          <label for="telefono">Telefono: </label>
+          <input pattern="\d{2}\s{1}(\d{4}-?){2}" type="tel" name="telefono" id="telefono" placeholder="11 1111-1111"
+            minlength="7" min="7" maxlength="12" max="12">
 
-      <article class="aboutContainer">
+        </div>
+        <div id="provinciaContacto">
+          <label for="provincia">Provincia: </label>
+          <select name="provincia" id="provincia">
+            <option>Buenos Aires</option>
+            <option>Ciudad Autónoma de Buenos Aires</option>
+            <option>Catamarca</option>
+            <option>Chaco</option>
+            <option>Chubut</option>
+            <option>Córdoba</option>
+            <option>Corrientes</option>
+            <option>Entre Ríos</option>
+            <option>Formosa</option>
+            <option>Jujuy</option>
+            <option>La Pampa</option>
+            <option>La Rioja</option>
+            <option>Mendoza</option>
+            <option>Misiones</option>
+            <option>Neuquén</option>
+            <option>Río Negro</option>
+            <option>Salta</option>
+            <option>San Juan</option>
+            <option>San Luis</option>
+            <option>Santa Cruz</option>
+            <option>Santa Fe</option>
+            <option>Santiago del Estero</option>
+            <option>Tierra del Fuego</option>
+            <option>Tucumán</option>
+          </select>
+        </div>
+        <div id="ciudadContacto">
+          <label for="ciudad">Ciudad: </label>
+          <input pattern="[a-zA-Z]+" type="text" name="ciudad" id="ciudad" minlength="4" min="4" maxlength="30"
+            max="30">
+        </div>
+      </fieldset>
+      <fieldset id="consulta">
+        <legend>Consulta</legend>
         <div>
-          <div class="aboutText">
-            <h3>Sobre Nosotros</h3>
-
-            <p>
-              Somos un local argentino que busca proveer lo que necesitan a todo
-              tipo de jugadores. Ya sean de Playstation, Xbox, Nintendo, o Pc.
-            </p>
-          </div>
-          <div class="SM-icons">
-            <p>Buscanos en nuestras redes!</p>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-github"></i></a>
-          </div>
-          <div id="contact" class="contactInfo">
-            <span id="Cnumero">+54 11 65319794</span>
-            <span id="Cemail"> gaming4all@gmail.com</span>
-            <span id="Cdireccion"> Av. Boyaca 374</span>
-            <span id="Chorarios"> Lunes a Viernes de 9:30hs a 17:30hs</span>
-          </div>
+          <label for="Juegos Fisicos">Categoría de consulta:</label>
+          <input type="checkbox" name="categoria" id="f_juegosDig" value="Juegos Digitales" class="espInput">
+          <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label>
+          <input type="checkbox" name="categoria" id="f_juegosPs4" value="Juegos Ps4" class="espInput">
+          <label for="Juegos Ps4" class="espLabel">Juegos PS4</label>
+          <input type="checkbox" name="categoria" id="f_juegosXbox" value="Juegos XBox" class="espInput">
+          <label for="Juegos XBox" class="espLabel">Juegos XBox</label>
+          <input type="checkbox" name="categoria" id="f_accesorios" value="Accesorios" class="espInput">
+          <label for="Accesorios" class="espLabel">Accesorios</label>
+          <input type="checkbox" name="categoria" id="f_otro" value="Otro" class="espInput">
+          <label for="otro" class="espLabel"> Otro</label>
         </div>
-        <div class="frameContainer">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.2624562075634!2d-58.461792684919246!3d-34.62280728045458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca211034eb89%3A0x611cd9220a12a7a!2sAv.%20Boyac%C3%A1%20374%2C%20C1406BHF%20CABA!5e0!3m2!1ses!2sar!4v1666523867919!5m2!1ses!2sar"
-            width="400"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div class="productoRelacionado">
+          <label for="productoRelacionado"> Producto Relacionado: </label>
+          <input pattern="\w+" type="text" name="productoRelacionado" id="productoRelacionado">
         </div>
-      </article>
-    </section>
+        <div class="divConsulta">
+          <label for="consulta">Consulta:</label>
+          <textarea pattern="\w+" name="consulta" id="textoConsulta" cols="50" rows="10" minlength="50" maxlength="600"
+            placeholder="Escribe tu consulta aquí..." required></textarea>
+        </div>
+      </fieldset>
+      <fieldset id="postConsulta">
+        <div>
+          <input type="checkbox" name="promocion" id="promocion" class="espInput">
+          <label for="promocion" class="espLabel">Quiero Recibir Contenido Promocional</label>
+        </div>
+        <div class="buttonsDiv">
+          <input type="submit" value="Enviar" class="formButtons" id="submitBtn">
+          <input type="reset" value="Resetear" class="formButtons" id="resetBtn">
+        </div>
+      </fieldset>
+    </form>
+  </section>
 
-    <footer>
-    
-      <div class="siteTitle">
-        <h2>Gaming4All</h2>
-        <p>Copyright - 2022. Todos los derechos reservados.</p>
-        <p>Diseñado para el Programa Codo a Codo 4.0</p>
+  <section id="aboutUs">
+    <article class="gameList">
+      <h3>Top 4 Minecraft Editions</h3>
+      <div class="list">
+        <table class="gameTable">
+          <thead>
+            <tr class="tableRow head">
+              <th>Nombre del juego</th>
+              <th>Mejor precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tableRow">
+              <td class="tableData tableName"></td>
+              <td class="tableData tableLow"></td>
+            </tr>
+            <tr class="tableRow">
+              <td class="tableData tableName"></td>
+              <td class="tableData tableLow"></td>
+            </tr>
+            <tr class="tableRow">
+              <td class="tableData tableName"></td>
+              <td class="tableData tableLow"></td>
+            </tr>
+            <tr class="tableRow">
+              <td class="tableData tableName"></td>
+              <td class="tableData tableLow"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <ul class="siteMap1">
-        <li class="map-item"><a href="#home">Home</a></li>
-        <li class="map-item"><a href="#news">Noticias</a></li>
-        <li class="map-item"><a href="#aboutUs">Sobre nosotros</a></li>
-      </ul>
-      <ul class="siteMap2">
-        <li class="map-item">
-          <a href="#juegosDigitales">Juegos Digitales</a>
-        </li>
-        <br />
-        <li class="map-item"><a href="#juegosPs4">Juegos PS</a></li>
-        <li class="map-item"><a href="#juegosXBox">Juegos Xbox</a></li>
-      </ul>
-    </footer>
+    </article>
 
-    <script src="gaming.js"></script>
-  </body>
+    <article class="aboutContainer">
+      <div>
+        <div class="aboutText">
+          <h3>Sobre Nosotros</h3>
+
+          <p>
+            Somos un local argentino que busca proveer lo que necesitan a todo
+            tipo de jugadores. Ya sean de Playstation, Xbox, Nintendo, o Pc.
+          </p>
+        </div>
+        <div class="SM-icons">
+          <p>Buscanos en nuestras redes!</p>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div id="contact" class="contactInfo">
+          <span id="Cnumero">+54 11 65319794</span>
+          <span id="Cemail"> gaming4all@gmail.com</span>
+          <span id="Cdireccion"> Av. Boyaca 374</span>
+          <span id="Chorarios"> Lunes a Viernes de 9:30hs a 17:30hs</span>
+        </div>
+      </div>
+      <div class="frameContainer">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.2624562075634!2d-58.461792684919246!3d-34.62280728045458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca211034eb89%3A0x611cd9220a12a7a!2sAv.%20Boyac%C3%A1%20374%2C%20C1406BHF%20CABA!5e0!3m2!1ses!2sar!4v1666523867919!5m2!1ses!2sar"
+          width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+
+    <div class="siteTitle">
+      <h2>Gaming4All</h2>
+      <p>Copyright - 2022. Todos los derechos reservados.</p>
+      <p>Diseñado para el Programa Codo a Codo 4.0</p>
+    </div>
+    <ul class="siteMap1">
+      <li class="map-item"><a href="#home">Home</a></li>
+      <li class="map-item"><a href="#news">Noticias</a></li>
+      <li class="map-item"><a href="#aboutUs">Sobre nosotros</a></li>
+    </ul>
+    <ul class="siteMap2">
+      <li class="map-item">
+        <a href="#juegosDigitales">Juegos Digitales</a>
+      </li>
+      <br />
+      <li class="map-item"><a href="#juegosPs4">Juegos PS</a></li>
+      <li class="map-item"><a href="#juegosXBox">Juegos Xbox</a></li>
+    </ul>
+  </footer>
+
+  <script src="gaming.js"></script>
+</body>
+
 </html>

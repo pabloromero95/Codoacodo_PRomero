@@ -345,7 +345,7 @@ fillData(4, accesorios);
 /* Function of GamePrices API*/
 
 const options = {
-  
+
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "b4b687758fmshbe0ef1cd7d3a433p1304f4jsn35c93d8250ea",
@@ -356,33 +356,32 @@ const options = {
 let responseFiltered = [];
 
 
-fetch("https://game-prices.p.rapidapi.com/games?title=minecraft&region=us&offset=0&limit=49",options)
-.then((response) => response.json())
-.then(({games}) => responseFiltered = games.filter((game) => game.type==='game' && game.hasOwnProperty("currentLowestPrice")))
-.then(fillList)
-.catch((err) => console.error(err));
-
-function showResponseFiltered()
-{
-  responseFiltered.map((element) => log("El precios más rentable es:",element.currentLowestPrice));
+/*fetch("https://game-prices.p.rapidapi.com/games?title=minecraft&region=us&offset=0&limit=49", options)
+  .then((response) => response.json())
+  .then(({ games }) => responseFiltered = games.filter((game) => game.type === 'game' && game.hasOwnProperty("currentLowestPrice")))
+  .then(fillList)
+  .catch((err) => console.error(err));
+*/
+function showResponseFiltered() {
+  responseFiltered.map((element) => log("El precios más rentable es:", element.currentLowestPrice));
 };
 
 let listNames = document.querySelectorAll(".tableName");
 let listLowPrice = document.querySelectorAll(".tableLow");
 
-function fillGameNames(){
+function fillGameNames() {
   for (let i = 0; i < responseFiltered.length; i++) {
     listNames[i].textContent = responseFiltered[i].name;
   }
 }
 
-function fillGameLowPrice(){
+function fillGameLowPrice() {
   for (let i = 0; i < responseFiltered.length; i++) {
     listLowPrice[i].textContent = Math.round(responseFiltered[i].currentLowestPrice * 290);
   }
 }
 
-function fillList(){
+function fillList() {
   responseFiltered.pop();
   fillGameNames();
   fillGameLowPrice();
@@ -448,28 +447,52 @@ juego1.resumenJuego();
 let juego2 = new Juego("Ciberpunk 2077", "Futuristic", 5000);
 juego2.resumenJuego();
 
-
-function validateForm(){
-  let nombreF = document.getElementById("nombre")
-  let hombreF = document.getElementById("hombre")
-  let mujerF = document.getElementById("mujer")
-  let otroF = document.getElementById("otro")
-  let emailF = document.getElementById("email")
-  let telefonoF = document.getElementById("telefono")
-  let provinciaF = document.getElementById("provincia")
-  let ciudadF = document.getElementById("ciudad")
-  let juegosFF = document.getElementById("juegos_Fisicos")
-  let juegosDF = document.getElementById("juegos_Digitales")
-  let juegosMF = document.getElementById("juegos_de_Mesa")
-  let etcF = document.getElementById("etc")
-  let productoF = document.getElementById("productoRelacionado")
-  let textoF = document.getElementById("textoConsulta")
-  let promocionF = document.getElementById("promocion")
-  let submitF = document.getElementById("submitBtn")
-  let resetF = document.getElementById("resetBtn")
-
-  console.log("test" + nombreF.id + resetF.id)
-}
- End of Object DB Model */ 
+ End of Object DB Model*/
 
 
+const doc = document;
+function docQSA(selector) { return doc.querySelectorAll(selector) };
+function docQS(selector) { return doc.querySelector(selector) };
+function docGEBI(selector) { return doc.getElementById(selector); };
+
+docGEBI("formulario_article").addEventListener("submit", validateForm);
+
+let InputsTextRestrictions = [];
+docQSA(
+  `#formulario_article input[type="text"],
+  #formulario_article input[type="email"],
+  #formulario_article input[type="tel"],
+  #formulario_article input[type="textarea"]`
+).forEach((input, index) => {
+  InputsTextRestrictions.push({
+    input, //<=shorthand mention, equal key and value variable...
+    max: input.maxLength,
+    min: input.minLength,
+    pattern: input.pattern
+  });
+  log(InputsTextRestrictions[index]);
+  // input.addEventListener('input', ({ target: { value } }) => log(value));
+});
+
+function validateForm({ target: { elements } }) {
+  event.preventDefault();
+
+  let categorias = elements.categoria;
+  let categoriasSinMarcadas = true;
+  let recibirPromociones = elements.promocion.checked;
+
+  for (i = 0; i < categorias.length; i++)
+    if (categoria[i].checked === true) {
+      categoriasSinMarcadas = false; break;
+    };
+
+  let errors = InputsTextRestrictions.some((
+    { input: { value }, min, max, pattern }) =>
+    (value.length < min && value.length > max) || !value.includes(pattern)
+  ) || categoriasSinMarcadas;
+
+  if (errors)
+    alert("¡REVISA bien los DATOS INGRESADOS!\n¡ERROR DE DATOS INGRESADOS!");
+  else
+    alert("¡ENVIO TEORICO DE DATOS ENVIADO CON EXITO!");
+};
