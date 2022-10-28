@@ -489,61 +489,54 @@
   <h2 id="contacto" class="gamesCategory">Contactanos!</h2>
 
   <section id="formularioContacto" class="container">
-    <form>
+    <form id="form">
       <i class="fa-regular fa-envelope"></i>
-
       <div class="input-group">
         <label>Nombre Completo</label>
         <input type="text" placeholder="Ingrese su nombre" id="contactName" onkeyup="validateName()">
         <div id="nombre-error" class="err"></div>
       </div>
-
       <div class="input-group">
         <label>Telefono</label>
         <input type="tel" placeholder="11 2222 3333" id="contactTel" onkeyup="validateTel()">
         <div id="tel-error" class="err"></div>
       </div>
-
       <div class="input-group">
         <label>Email</label>
         <input type="email" placeholder="Ingrese su Email" id="contactEmail" onkeyup="validateEmail()">
         <div id="email-error" class="err"></div>
       </div>   
-
       <div id="check-group" onclick="validateCheckGroup()">
         <label for="Juegos Fisicos">Categoría de consulta:</label><br>
-        <input type="checkbox" name="categoria" id="f_juegosDig" value="checked" class="espInput">
+        <input type="checkbox" name="categoria" id="f_juegosDig" value="" class="espInput">
         <label for="Juegos Digitales" class="espLabel">Juegos Digitales</label><br>
-        <input type="checkbox" name="categoria" id="f_juegosPs4" value="checked" class="espInput">
+        <input type="checkbox" name="categoria" id="f_juegosPs4" value="" class="espInput">
         <label for="Juegos Ps4" class="espLabel">Juegos PS4</label><br>
-        <input type="checkbox" name="categoria" id="f_juegosXbox" value="checked" class="espInput">
+        <input type="checkbox" name="categoria" id="f_juegosXbox" value="" class="espInput">
         <label for="Juegos XBox" class="espLabel">Juegos XBox</label><br>
-        <input type="checkbox" name="categoria" id="f_accesorios" value="checked" class="espInput">
+        <input type="checkbox" name="categoria" id="f_accesorios" value="" class="espInput">
         <label for="Accesorios" class="espLabel">Accesorios</label><br>
-        <input type="checkbox" name="categoria" id="f_otro" value="checked" class="espInput">
+        <input type="checkbox" name="categoria" id="f_otro" value="" class="espInput">
         <label for="otro" class="espLabel"> Otro</label>
         <div id="checkgroup-error" class="err"></div>
       </div>
-
       <div class="input-group">
         <label>Producto</label>
         <input type="text" placeholder="Producto por el que consulta" id="contactProduct" onkeyup="validateProduct()">
         <div id="product-error" class="err"></div>
       </div>
-
       <div class="input-group">
         <label>Su Mensaje</label>
         <textarea rows="5" placeholder="Ingrese su mensaje" id="contactMsg" onkeyup="validateMsg()"></textarea>
         <div id="msg-error" class="err"></div>
       </div>
-
       <div>
         <input type="checkbox" name="categoria" id="suscribe" value="suscribe" class="espInput">
         <label for="otro" class="espLabel"> Informenme sobre ofertas!</label>
       </div>
-
-    <button onclick="return validate()">Submit</button>
-    <div id="submit-error" class="err"></div>
+      <button type="Submit" onclick="validate()" form="form" value="SEND">Submit</button>
+      <div id="submit-error" class="err"></div>
+    </form>
   </section>
 
 

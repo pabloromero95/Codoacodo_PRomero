@@ -456,7 +456,7 @@ function validateName(){
 function validateTel(){
   let tel = docGEBI("contactTel").value;
   if (tel.length == 0) {
-    telError.textContent = "Se requiere un teléfono";
+    telError.textContent = "Se requiere un teléfono de hasta 10 digitos";
     telError.style.color = "red";
     return false;
   }
@@ -465,13 +465,8 @@ function validateTel(){
     telError.style.color = "red";
     return false;
   }
-  else if (tel.length > 10) {
-    telError.textContent = "Máximo 10 dígitos";
-    telError.style.color = "red";
-    return false;
-  }
-  else if (!tel.match(/^[0-9]{6,10}$/)){
-    telError.textContent = "Inserte números solamente";
+  else if (!tel.match(/^[0-9]{8,10}$/)){
+    telError.textContent = "Inserte solo números hasta 10 dígitos";
     telError.style.color = "red";
     return false;
   }
@@ -497,18 +492,14 @@ function validateEmail(){
   return true;
 }
 
-function validateMsg(){
-  let msg = docGEBI("contactMsg").value;
-  let required = 30;
-  let left = required - msg.length;
-
-  if(left > 0) {
-      mensajeError.textContent = "Quedan " + left + " caracteres por agregar";
-      mensajeError.style.color = "red";
-      return false;
-    }
-  mensajeError.innerHTML = '<i class="fas fa-check-circle"></i>';
-  mensajeError.style.color = "green";
+function validateCheckGroup(){
+  if(!checkJD.checked && !checkJPS.checked && !checkJXB.checked && !checkAcc.checked && !checkOtros.checked){
+    checkboxError.textContent = "Seleccione al menos una opción";
+    checkboxError.style.color = "red";
+    return false;
+  }
+  checkboxError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  checkboxError.style.color = "green";
   return true;
 }
 
@@ -524,22 +515,44 @@ function validateProduct(){
   return true;
 }
 
-function validateCheckGroup(){
-  if(!checkJD.checked && !checkJPS.checked && !checkJXB.checked && !checkAcc.checked && !checkOtros.checked){
-    checkboxError.textContent = "Seleccione al menos una opción";
-    checkboxError.style.color = "red";
-    return false;
-  }
-  checkboxError.innerHTML = '<i class="fas fa-check-circle"></i>';
-  checkboxError.style.color = "green";
+function validateMsg(){
+  let msg = docGEBI("contactMsg").value;
+  let required = 30;
+  let left = required - msg.length;
+
+  if(left > 0) {
+      mensajeError.textContent = "Quedan " + left + " caracteres por agregar";
+      mensajeError.style.color = "red";
+      return false;
+    }
+  mensajeError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  mensajeError.style.color = "green";
   return true;
 }
 
+
+
+
+function resetData(){
+  docGEBI("contactName").value = "";
+  docGEBI("contactTel").value = "";
+  docGEBI("contactEmail").value = "";
+  docGEBI("contactMsg").value = "";
+  docGEBI("contactProduct").value = "";
+  docGEBI("contactMsg").value = "";
+  checkJD.removeAttribute("checked");
+  checkJPS.removeAttribute("checked");
+  checkJXB.removeAttribute("checked");
+  checkAcc.removeAttribute("checked");
+  checkOtros.removeAttribute("checked");
+}
+
 function validate() {
-  if(!validateName() || !validateTel() || !validateEmail() || !validateCheckGroup() || !validateProduct() || !validateMsg()){
+  if(!validateName() || !validateEmail() || !validateProduct() || !validateMsg() || !validateTel()){
     submitError.style.display = "block"
     submitError.textContent = "Por favor corrija los errores para enviar";
     setTimeout(function(){submitError.style.display = "none";}, 3000)
     return false;
   }
+  resetData();
 }

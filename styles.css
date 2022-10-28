@@ -460,7 +460,7 @@ form button{
     margin-top: 10%;
     padding-left: 10px;
     grid-template-rows: 1fr;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 4fr 1fr 1fr;
     grid-template-areas:
       'nombre mapa_sitio1 mapa_sitio2';
     background-color: var(--color_style1);
