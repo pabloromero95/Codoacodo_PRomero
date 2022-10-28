@@ -530,9 +530,6 @@ function validateMsg(){
   return true;
 }
 
-
-
-
 function resetData(){
   docGEBI("contactName").value = "";
   docGEBI("contactTel").value = "";
@@ -556,3 +553,66 @@ function validate() {
   }
   resetData();
 }
+
+/* Previous validation method
+docGEBI("formulario_article").addEventListener("submit", validateForm);
+
+let InputsTextRestrictions = [];
+docQSA(
+  `#formulario_article input[type="text"],
+  #formulario_article input[type="email"],
+  #formulario_article input[type="tel"],
+  #formulario_article input[type="textarea"]`
+).forEach((input, index) => {
+  InputsTextRestrictions.push({
+    input, //<=shorthand mention, equal key and value variable...
+    max: input.maxLength,
+    min: input.minLength,
+    pattern: input.pattern
+  });
+  log(InputsTextRestrictions[index]);
+  // input.addEventListener('input', ({ target: { value } }) => log(value));
+});
+
+function validateForm({ target: { elements } }) {
+  event.preventDefault();
+
+  let categorias = elements.categoria;
+  let categoriasSinMarcadas = true;
+  let recibirPromociones = elements.promocion.checked;
+
+  for (i = 0; i < categorias.length; i++)
+    if (categoria[i].checked === true) {
+      categoriasSinMarcadas = false; break;
+    };
+
+  let errors = InputsTextRestrictions.some((
+    { input: { value }, min, max, pattern }) =>
+    (value.length < min && value.length > max) || !value.includes(pattern)
+  ) || categoriasSinMarcadas;
+
+  if (errors)
+    alert("¡REVISA bien los DATOS INGRESADOS!\n¡ERROR DE DATOS INGRESADOS!");
+  else
+    alert("¡ENVIO TEORICO DE DATOS ENVIADO CON EXITO!");
+};
+
+let formNombre = getElementById("nombre");
+console.log(formNombre.textContent)
+
+function validarNombre(){
+  if (formNombre.value.length == ""){
+    formNombre.classList.add(" empty")
+  }
+  else if (formNombre.value.length < 3) {
+    formNombre.classList.add(" invalid")
+  }
+  else if (formNombre.value.length >= 3 && formNombre.value.length < 30) {
+    formNombre.classList.add(" valid")
+}
+console.log(formNombre.value)
+}
+
+formNombre.addEventListener("input", validarNombre())
+*/
+
