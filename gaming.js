@@ -344,48 +344,17 @@ fillData(4, accesorios);
 
 /* Function of GamePrices API*/
 
-const options = {
-
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "b4b687758fmshbe0ef1cd7d3a433p1304f4jsn35c93d8250ea",
-    "X-RapidAPI-Host": "game-prices.p.rapidapi.com",
-  },
-};
-
 let responseFiltered = [];
 
-
-/*fetch("https://game-prices.p.rapidapi.com/games?title=minecraft&region=us&offset=0&limit=49", options)
-  .then((response) => response.json())
-  .then(({ games }) => responseFiltered = games.filter((game) => game.type === 'game' && game.hasOwnProperty("currentLowestPrice")))
-  .then(fillList)
-  .catch((err) => console.error(err));
-*/
-function showResponseFiltered() {
-  responseFiltered.map((element) => log("El precios más rentable es:", element.currentLowestPrice));
-};
-
-let listNames = document.querySelectorAll(".tableName");
-let listLowPrice = document.querySelectorAll(".tableLow");
-
-function fillGameNames() {
-  for (let i = 0; i < responseFiltered.length; i++) {
-    listNames[i].textContent = responseFiltered[i].name;
-  }
-}
-
-function fillGameLowPrice() {
-  for (let i = 0; i < responseFiltered.length; i++) {
-    listLowPrice[i].textContent = Math.round(responseFiltered[i].currentLowestPrice * 290);
-  }
-}
-
-function fillList() {
-  responseFiltered.pop();
-  fillGameNames();
-  fillGameLowPrice();
-}
+fetch("https://api.bluelytics.com.ar/v2/latest")
+.then((response) => response.json())
+.then(data => {
+  console.log(data);
+  let listPrice = document.querySelectorAll(".tableLow");
+  listPrice[0].textContent = data.blue.value_sell;
+  listPrice[1].innerHTML = data.blue_euro.value_sell;
+})
+.catch((err) =>console.log(err));
 
 /* Alternative Object DB Model
 
@@ -449,12 +418,143 @@ juego2.resumenJuego();
 
  End of Object DB Model*/
 
-
 const doc = document;
 function docQSA(selector) { return doc.querySelectorAll(selector) };
 function docQS(selector) { return doc.querySelector(selector) };
 function docGEBI(selector) { return doc.getElementById(selector); };
 
+let nameError = docGEBI("nombre-error");
+let telError = docGEBI("tel-error");
+let emailError = docGEBI("email-error");
+let mensajeError = docGEBI("msg-error");
+let submitError = docGEBI("submit-error");
+let productError = docGEBI("product-error");
+let checkboxError = docGEBI("checkgroup-error");
+let checkJD = docGEBI("f_juegosDig");
+let checkJPS = docGEBI("f_juegosPs4");
+let checkJXB = docGEBI("f_juegosXbox");
+let checkAcc = docGEBI("f_accesorios");
+let checkOtros = docGEBI("f_otro");
+
+function validateName(){
+  let name = docGEBI("contactName").value;
+  if (name.length == 0) {
+    nameError.textContent = "Se requiere el nombre";
+    nameError.style.color = "red";
+    return false;
+  } 
+  else if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/) || !name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+    nameError.textContent = "Se requiere el nombre completo";
+    nameError.style.color = "red";
+    return false;
+  }
+  nameError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  nameError.style.color = "green";
+  return true;
+}
+
+function validateTel(){
+  let tel = docGEBI("contactTel").value;
+  if (tel.length == 0) {
+    telError.textContent = "Se requiere un teléfono de hasta 10 digitos";
+    telError.style.color = "red";
+    return false;
+  }
+  else if (tel.length < 8) {
+    telError.textContent = "Debe tener al menos menos 8 dígitos";
+    telError.style.color = "red";
+    return false;
+  }
+  else if (!tel.match(/^[0-9]{8,10}$/)){
+    telError.textContent = "Inserte solo números hasta 10 dígitos";
+    telError.style.color = "red";
+    return false;
+  }
+  telError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  telError.style.color = "green";
+  return true;
+}
+
+function validateEmail(){
+  let email = docGEBI("contactEmail").value;
+  if (email.length == 0){
+      emailError.textContent = "Se requiere un email";
+      emailError.style.color = "red";
+      return false;
+    }
+  else if(!email.match(/^[A-Za-z\._$#%&()/\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+      emailError.textContent = "Email inválido";
+      emailError.style.color = "red";
+      return false;
+    }
+  emailError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  emailError.style.color = "green";
+  return true;
+}
+
+function validateCheckGroup(){
+  if(!checkJD.checked && !checkJPS.checked && !checkJXB.checked && !checkAcc.checked && !checkOtros.checked){
+    checkboxError.textContent = "Seleccione al menos una opción";
+    checkboxError.style.color = "red";
+    return false;
+  }
+  checkboxError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  checkboxError.style.color = "green";
+  return true;
+}
+
+function validateProduct(){
+  let product = docGEBI("contactProduct").value;
+  if(product.length == 0) {
+      productError.textContent = "Ingrese un producto";
+      productError.style.color = "red";
+      return false;
+  }
+  productError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  productError.style.color = "green";
+  return true;
+}
+
+function validateMsg(){
+  let msg = docGEBI("contactMsg").value;
+  let required = 30;
+  let left = required - msg.length;
+
+  if(left > 0) {
+      mensajeError.textContent = "Quedan " + left + " caracteres por agregar";
+      mensajeError.style.color = "red";
+      return false;
+    }
+  mensajeError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  mensajeError.style.color = "green";
+  return true;
+}
+
+function resetData(){
+  docGEBI("contactName").value = "";
+  docGEBI("contactTel").value = "";
+  docGEBI("contactEmail").value = "";
+  docGEBI("contactMsg").value = "";
+  docGEBI("contactProduct").value = "";
+  docGEBI("contactMsg").value = "";
+  checkJD.removeAttribute("checked");
+  checkJPS.removeAttribute("checked");
+  checkJXB.removeAttribute("checked");
+  checkAcc.removeAttribute("checked");
+  checkOtros.removeAttribute("checked");
+}
+
+function validate() {
+  if(!validateName() || !validateEmail() || !validateProduct() || !validateMsg() || !validateTel()){
+    submitError.style.display = "block"
+    submitError.textContent = "Por favor corrija los errores para enviar";
+    setTimeout(function(){submitError.style.display = "none";}, 3000)
+    return false;
+  }
+  resetData();
+}
+
+/* Previous validation method
 docGEBI("formulario_article").addEventListener("submit", validateForm);
 
 let InputsTextRestrictions = [];
@@ -514,5 +614,5 @@ console.log(formNombre.value)
 }
 
 formNombre.addEventListener("input", validarNombre())
-
+*/
 
