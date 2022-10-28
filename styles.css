@@ -227,7 +227,7 @@
     min-height: 50vh;
     width: 90%;
     background-color: var(--color_style3);
-    margin: 3vh 2vw;
+    margin: 3vh auto;
     border: 3px solid var(--color_font1);
     border-radius: 1rem;
     box-shadow: 5px 5px 10px #23185a;
@@ -381,7 +381,7 @@ form button{
   align-items: center;
   justify-content: center;
   text-align: center;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
   display: block;
   padding: 10px;
@@ -413,8 +413,8 @@ form button{
   justify-content: center;
   text-align: center;
   width: 50%;
-  min-width: 350px;
-  max-width: 500px;
+  min-width: 300px;
+  max-width: 400px;
   height: 50%;
   display: block;
   padding: 10px;
@@ -457,7 +457,6 @@ form button{
 
   footer {
     display: grid;
-    max-height: 200px;
     height: auto;
     margin-top: 10%;
     padding-left: 10px;
@@ -524,6 +523,11 @@ form button{
   /* Configuraciones para mobile*/
 
   @media screen and (max-width: 600px) {
+
+    body{
+      margin:auto;
+
+    }
 
     .topnav a:not(:first-child),
     .dropdown .dropbtn {
@@ -616,6 +620,17 @@ form button{
     #cotizacionTabla h3{
       font-size: 1.5rem;
     }
+    #formularioContacto {
+      margin-top: 10vh;
+    }
+
+    footer {
+      grid-template-rows: 2fr;
+      grid-template-columns: 3fr 3fr;
+      grid-template-areas:
+      'nombre nombre'
+      'mapa_sitio1 mapa_sitio2';
+    }
   }
 
   /* Fin de config mobile*/
@@ -626,24 +641,26 @@ form button{
 
     /* Tablet Code*/
     .juegoContainer {
-      max-width: 25rem;
-      height: 40vh;
+      max-width: 20rem;
+      height: 65vh;
     }
     .juegoContainer h3{
-      font-size: 1.2rem;
+      font-size: 1rem;
+      height:9vh;
     }
 
     :root {
       font-size: 18px;
     }
 
-    .juegoImg {
-      width: 100%;
-      height: auto;
+    .juegoContainer Img {
+      width: auto;
+      height: 100%;
       margin: 6px;
     }
 
     .juegoDescripcion {
+      height: 80vh;
       overflow-y: hidden;
     }
 
@@ -651,36 +668,6 @@ form button{
       display: grid;
       grid-template-rows: 4fr;
       grid-template-columns: 1fr 1fr;
-    }
-
-    fieldset#datosPersonales {
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-        'nombre_apellido genero'
-        'email telefono'
-        'provincia ciudad';
-      max-width: 575px;
-    }
-
-    .espInput {
-      width: 7%;
-      margin-right: 2%;
-      height: 1rem;
-    }
-
-    .productoRelacionado {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .nombreDiv {
-      grid-area: nombre_apellido;
-    }
-
-    .generoDiv {
-      grid-area: genero;
     }
 
     footer {
@@ -702,13 +689,14 @@ form button{
     }
     
     .juegoContainer {
+      min-width: 300px;
       max-width: 25rem;
-      height: 40vh;
+      height: 60vh;
     }
 
     .juegoContainer h3{
-      font-size: 1.2rem;
-      line-height: large;
+      font-size: 1.1rem;
+      height: 11vh;
     }
 
     :root {
